@@ -1,0 +1,7 @@
+en:
+  hello: "Hello world"
+
+  #layouts
+  layouts:
+    application:
+      title: "Fbtf02"
