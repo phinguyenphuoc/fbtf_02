@@ -1,0 +1,38 @@
+vi:
+  base_title: "S Travel"
+
+  #layouts
+  layouts:
+    header:
+      dstour: "Danh sách tour"
+      baiviet: "Bài viết"
+      dnhap: "Đăng nhập"
+
+    footer:
+      about: "Về chúng tôi"
+      noidung: "Hệ thống đặt tour du lịch trực tuyến hàng đầu Việt Nam"
+      lienketlq: "Liên kết liên quan"
+      dieukhoan: "Điều kiện & Điều khoản"
+      quyche: "Quy chế hoạt động"
+      cauhoi: "Câu hỏi thường gặp"
+      khuyenmai: "Tin khuyến mãi"
+      lienhe: "Liên hệ"
+      tuvan: "Tư vấn miễn phí (24/7):"
+      sdttuvan: "0123456789"
+      gopy: "Góp ý, phản ánh (8h00 - 22h00):"
+      sdtgopy: "0987654321"
+      vanphong: "Văn phòng"
+      vp1: "13F Keangnam Hanoi Landmark 72 Tower, Plot E6, Pham Hung Road, Nam Tu Liem Dist., Ha Noi"
+      vp2: "4F, FHome Building, 16 Ly Thuong Kiet Str., Hai Chau district, Da Nang"
+      vp3: "8F Nice building, 467 Dien Bien Phu Str., Ward 25, Binh Thanh district, HCMC"
+      lkkhac: "Liên kết khác"
+      email: "Email: hotro@stravel.com"
+      youtube: "Youtube: S Travel"
+      fb: "Fanpage: fb.com/thanhdat128"
+      email1: "email"
+      location_on: "location_on"
+
+  #static_pages
+  static_pages:
+    home:
+      title: "Trang chủ"

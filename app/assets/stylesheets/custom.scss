@@ -1,0 +1,582 @@
+@import 'bootstrap';
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v43/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.ul-footer{
+  padding-left: 20;
+}
+
+.img{
+  max-width:100px;
+  margin-top: -7px;
+}
+
+.navbar-custom{
+  box-shadow: 0px 2px 4px #ccc;
+  z-index: 1001;
+}
+.navbar-custom > div {
+  max-width: 1199px;
+  margin: auto;
+}
+.nav-user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.linedivide{
+  width: 1px;
+  height: 30px;
+  background-color: #1882B0;
+  margin: 0 25px;
+}
+.brand-text{
+  display: inline-block;
+  margin: 0 !important;
+  font-weight: 300;
+  color: #1882B0;
+}
+.container-search{
+  height: 500px;
+  background: url(/img/bg-search.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-tour{
+  background-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  width: 100%;
+  max-width: 767px;
+  margin: 0 10px;
+}
+.title-search{
+  color: white;
+  padding: 15px;
+}
+.fix-input-search{
+  border-radius: 0;
+}
+.icon-location{
+  position: absolute;
+  right: 15px;
+  top: -25px;
+}
+.tour-hot-container{
+  margin: 15px 0;
+  border-bottom: 2px solid #1882B0;
+}
+.title-tour-hot{
+  display: inline-block;
+  padding: 5px 10px;
+  color: white;
+  background-color: #1882B0;
+}
+.ul-choice{
+  list-style-image: url('/../img/checkmark.png');
+}
+.container-tour{
+  padding-top: 10px;
+  background-color: #ECF0F5;
+}
+.card-tour{
+  margin: 10px 0;
+  color: #333;
+  border-radius: 0 !important;
+  text-decoration: none !important;
+}
+.card-tour:hover{
+  color: #333;
+}
+.card-tour .card-img-tour{
+  transition: transform .2s;
+}
+.card-tour:hover .card-img-tour{
+  transform: scale(1.05);
+}
+.card-tour:hover .card-body-tour{
+  background-color: #DBE9F5;
+}
+.card-body-tour{
+  padding: 10px !important;
+}
+.card-body-tour > h5{
+  font-size: 17px;
+  color: #1882B0 !important;
+}
+.card-price-tour{
+  margin: 0;
+  color: rgb(105, 203, 245) !important;
+  font-size: 22px;
+  font-weight: 700;
+}
+.card-img-tour{
+  position: relative;
+}
+.img-location{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px 10px;
+  background-color: rgba(28, 98, 128, 0.7);
+  color: white;
+}
+.content-police, .content-about, .content-copyright{
+  padding: 5px;
+}
+.container-police, .container-about{
+  padding: 15px 0;
+}
+.about-text{
+  text-align: justify;
+}
+.about-text h6{
+  color: #1882B0
+}
+.about-text p{
+  margin-bottom: 0;
+}
+.container-footer-about{
+  background-color: white;
+}
+.hotline{
+  color: #2eb6f0;
+  font-size: 26px;
+}
+.container-footer-copyright{
+  background-color: rgba(210, 210, 210, 0.3);
+}
+.content-copyright{
+  font-size: 14px;
+  text-align: left;
+}
+.content-copyright p{
+  margin-bottom: 0 !important;
+}
+.content-card{
+  font-size: 24px;
+  text-align: right;
+}
+.icon-location-tours-page{
+  position: absolute;
+  margin: 5px 10px;
+}
+.title-search-tours-page{
+  padding-left: 80px;
+}
+.container-search-tours-page{
+  height: 100px !important;
+  background-position: 50% 60%
+}
+.breadcrumb{
+  background-color: rgba(204, 204, 204, 0);
+  padding-bottom: 0;
+}
+.card-header > h5{
+  margin: 0;
+}
+.list-location{
+  padding: 10px !important;
+}
+.title-search-tours{
+  color: #1882B0;
+}
+.container-pagination{
+  margin: 15px 0 10px;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  overflow: auto;
+  line-height: 35px;
+}
+.btn-next, .btn-prev{
+  height: 35px;
+  margin: 0 3px;
+  padding: 6px;
+}
+.card-tour-page{
+  position: relative;
+  margin: 15px 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 4px #ccc;
+}
+.card-title-tour-page p{
+  margin: 0;
+  font-size: 14px;
+  padding: 0 5px;
+}
+.card-title-tour-page{
+  padding: 5px;
+}
+.title-tour-page{
+  padding: 5px;
+  font-size: 17px;
+  color: #1882B0;
+}
+.img-card-tour-page{
+  position: relative;
+  min-height: 160px;
+  height: 100%;
+}
+.card-price-tour-page{
+  margin: 15px 0;
+  color: rgb(105, 203, 245) !important;
+  font-size: 22px;
+}
+.title-name-tour-detail{
+  color: #1882B0;
+  margin-bottom: 15px;
+}
+.general-info{
+  padding: 10px;
+  background-color: #f1f1f1
+}
+.general-info-item{
+  display: inline-block;
+  margin-right: 15px;
+}
+.container-book-tour{
+  padding: 15px;
+  background-color: rgba(42, 111, 143, 0.9);
+  color: white;
+}
+.form-control-fix{
+  border-radius: 0 !important;
+}
+.price-tour-detail{
+  color: white;
+}
+.container-detail-tour{
+  padding: 15px;
+}
+.bg-login{
+  background: url(../image/bg-login.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 850px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-login{
+  margin: 5px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: #343a40;
+  color: white;
+  opacity: 0.9;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+.label-login{
+  text-align: left !important;
+}
+.container-step-checkout{
+  margin: 20px 5px;
+  box-shadow: 5px 5px 10px #ccc;
+}
+.head-step-checkout{
+  background-color: #2d353c0f;
+}
+.checkout{
+  padding: 10px;
+  min-height: 90px;
+}
+.checkout-active{
+  background-color: #2d4152d4;
+  height: inherit;
+}
+.checkout-active>.checkout-info{
+  color: white;
+}
+.checkout-active>.checkout-number{
+  color: white;
+  border-bottom: 3px solid #91c6ff;
+}
+.checkout-number{
+  color: #aaa;
+  float: left;
+  font-size: 28px;
+  width: 30px;
+  line-height: 32px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  border-bottom: 3px solid #aaa;
+}
+.checkout-info{
+  padding: 10px 10px 10px 48px;
+  color: #aaa;
+}
+.checkout-title{
+  font-size: 16px;
+}
+.checkout-desc{
+  font-size: 13px;
+}
+.container-checkout-main{
+  padding: 30px;
+  min-height: 300px;
+  background-color: white;
+}
+.container-checkout-footer{
+  padding: 15px;
+  background-color: #ddd;
+  height: 70px;
+}
+.content-checkout-info{
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+.checkout-complete{
+  text-align: center;
+  padding: 20px;
+}
+.item-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-myaccount{
+  width: 100%;
+  margin: 80px 0 25px 0;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px #ccc;
+}
+.container-user-info{
+  position: relative;
+  background-color: #1e3950e5;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  padding: 15px;
+}
+.container-history-payment{
+  padding: 15px;
+  height: 100%;
+}
+.avatar{
+  position: absolute;
+  top: -50px;
+  left: 25px;
+  padding: 5px;
+  width: 160px;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: #1e3950;
+  box-shadow: 2px 2px 8px #333;
+}
+.content-user-info{
+  padding: 110px 5px 5px;
+  color: white;
+}
+.table-middle{
+  vertical-align: middle !important;
+}
+.container-comment{
+  background-color: #eee;
+  padding: 20px;
+}
+.scrollbar {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+.error-pattern{
+  color: red;
+}
+.dropdown-login{
+  position: relative;
+}
+.dropdown-login-content{
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 110%;
+  border-radius: 3px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1111;
+}
+.dropdown-login:hover .dropdown-login-content{
+  display: block;
+}
+.dropdown-login-content a:hover, .dropdown-login-content button:hover {
+  background-color: #f3f3f3;
+  border-bottom: 2px solid #1882B0;
+}
+.list-group-item-action{
+  border-radius: 0px !important;
+  padding: 10px !important;
+}
+.list-group-item-action:hover {
+  background-color: #f3f3f3;
+}
+.login-navbar{
+  color: #666;
+  min-width: 140px;
+}
+.search{
+  position: relative;
+  margin: 5px;
+  vertical-align: middle;
+}
+.result-search {
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+  overflow-y: auto;
+  max-height: 400px;
+  box-sizing: border-box;
+  z-index: 1001;
+  box-shadow: 6px 6px 6px -2px rgba(0,0,0,0.2);
+}
+.text-result{
+  margin-bottom: 0px;
+  padding: 10px 0 10px 25px;
+  display: inline-block;
+}
+.tag-search{
+  display: inline-block;
+  background: #1882B0;
+  color: white;
+}
+a:hover{
+  text-decoration: none !important;
+}
+.btn-delete{
+  padding: 10px 7px 14px 7px;
+  line-height: 0;
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  font-size: 20px;
+}
+.list-group-item-search{
+  padding: 5px !important;
+}
+.calendar-book-tour-item{
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 360px;
+  z-index: 1111;
+}
+.calendar-book-tour:hover .calendar-book-tour-item{
+  display: block;
+}
+.not-found{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 570px;
+}
+.not-found-content{
+  background-color: white;
+  padding: 50px 100px;
+  box-shadow: 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+.not-found-content > h2{
+  color: #1882B0;
+}
+.slide-search{
+  position: relative;
+}
+.search-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 550px;
+}
+.search-content{
+  margin: 0 15px;
+  max-width: 1150px;
+  width: 100%;
+}
+.search-title{
+  color: white;
+  margin-bottom: 20px;
+}
+.search-form{
+  padding: 15px;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+.card-post{
+  margin: 10px 0;
+  height: 100px;
+}
+.card-post-body{
+  padding: 10px;
+}
+@media screen and (max-width: 767px) {
+  .nav-user{
+    margin-right: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  .img-card-tour-page{
+    min-height: 250px;
+    background: url(https://via.placeholder.com/900x600) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .tag-search{
+    display: inline-block;
+    background: #1882B0;
+    color: white;
+    width: 100%;
+  }
+  .text-result{
+    margin-bottom: 0px;
+    padding: 10px 5px;
+    display: inline-block;
+  }
+  .text-price-search{
+    padding-right: 25px !important;
+  }
+}

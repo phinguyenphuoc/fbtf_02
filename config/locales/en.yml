@@ -1,7 +1,12 @@
 en:
   hello: "Hello world"
+  base_title: "S Travel"
 
   #layouts
   layouts:
     application:
-      title: "Fbtf02"
+
+  #static_pages
+  static_pages:
+    home:
+      title: "Home"
