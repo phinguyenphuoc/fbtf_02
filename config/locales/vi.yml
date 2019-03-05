@@ -1,5 +1,7 @@
 vi:
   base_title: "S Travel"
+  errs: "Có %{errors_count}."
+  msgsuccess: "Chúc mừng bạn đã đăng ký thành công."
 
   #layouts
   layouts:
@@ -36,3 +38,17 @@ vi:
   static_pages:
     home:
       title: "Trang chủ"
+
+  #users
+  users:
+    new:
+      signup: "Đăng ký"
+      create: "Tạo tài khoản"
+
+    form:
+      name: "Họ và tên:"
+      email: "Email:"
+      psw: "Mật khẩu:"
+      pswc: "Nhập lại mật khẩu:"
+      phonenumber: "Số điện thoại:"
+      login: "Đã có tài khoản? Đăng nhập"

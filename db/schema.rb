@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_070852) do
     t.integer "status", default: 0, null: false
     t.float "bill"
     t.string "name"
-    t.integer "phone"
+    t.integer "phonenumber"
     t.string "address"
     t.string "note"
     t.datetime "created_at", null: false
@@ -79,9 +79,10 @@ ActiveRecord::Schema.define(version: 2019_03_05_070852) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name"
     t.string "email"
     t.integer "phonenumber"
-    t.string "password"
+    t.string "password_digest"
     t.integer "role", default: 0, null: false
     t.string "remember_digest"
     t.string "reset_digest"

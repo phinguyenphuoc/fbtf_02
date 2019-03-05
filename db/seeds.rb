@@ -1,14 +1,18 @@
 # fake user
-User.create!(email: "phinguyen@gmail.com",
-             phonenumber: 99999999,
-             password: "123321",
+User.create!(name: "Tran Le Thanh Dat",
+             email: "tranlethanhdat@gmail.com",
+             phonenumber: 193456789,
+             password: "123456",
+             password_confirmation: "123456",
              role: 1)
 10.times do |n|
   email = Faker::Internet.email
   phonenumber = Faker::Number.number(10)
-  User.create!(email: email,
+  User.create!(name: "Dat Tran Le Thanh",
+               email: email,
                phonenumber: phonenumber,
-               password: "123321")
+               password: "123456",
+               password_confirmation: "123456")
 end
 # create category
 Category.create!(name: "domestic")

@@ -1,0 +1,8 @@
+size: 80
+user:
+  max_email: 255
+  min_pass: 6
+  max_name: 50
+
+  min_phone: 9
+  max_phone: 11
