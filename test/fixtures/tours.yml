@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_id: 
+  travelling_id: 
+  price: 1.5
+  time_start: 2019-03-05 14:05:32
+  time_end: 2019-03-05 14:05:32
+  title: MyString
+  description: MyText
+  recent_quantity: 
+  max_quantity: 
+  avatar: MyString
+
+two:
+  category_id: 
+  travelling_id: 
+  price: 1.5
+  time_start: 2019-03-05 14:05:32
+  time_end: 2019-03-05 14:05:32
+  title: MyString
+  description: MyText
+  recent_quantity: 
+  max_quantity: 
+  avatar: MyString

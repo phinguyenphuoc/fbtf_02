@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  tour_id: 
+  content: MyText
+  rating: 
+
+two:
+  user_id: 
+  tour_id: 
+  content: MyText
+  rating: 
