@@ -7,7 +7,7 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.integer :status, default: 0, null: false
       t.float :bill
       t.string :name
-      t.integer :phone
+      t.integer :phonenumber
       t.string :address
       t.string :note
 
