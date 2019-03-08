@@ -3,7 +3,7 @@ vi:
   errs: "Có %{errors_count}."
   msgsuccess: "Chúc mừng bạn đã đăng ký thành công."
   errlogin: "Tài khoản hoặc mật khẩu không đúng."
-
+  permission_denide: "Bạn không có quyền truy cập"
   #layouts
   layouts:
     header:
@@ -74,3 +74,20 @@ vi:
     admin:
       admin: "Admin"
       test: "Hello Admin"
+
+  admins:
+    show:
+      admin: "Admin"
+      profile: "Thông tin"
+      logout: "Đăng xuất"
+      welcome: "Xin chào"
+    sidebar:
+      admin: "Admin"
+      dashboard: "Dashboard"
+      interface: "Interface"
+      manage: "Quản lí"
+      user: "Người dùng"
+      tour: "Tour"
+    footer:
+      copyright: Copyright
+      website: Framgia website

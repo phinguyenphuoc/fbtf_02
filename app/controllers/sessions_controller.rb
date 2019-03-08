@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
   def login _user
     if @user.admin?
       log_in @user
-      redirect_to root_path
+      redirect_to admin_root_path
     else
       if params[:session][:remember_me] == Settings.sessions.remember_me
         remember(@user)
