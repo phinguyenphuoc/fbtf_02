@@ -2,6 +2,7 @@ vi:
   base_title: "S Travel"
   errs: "Có %{errors_count}."
   msgsuccess: "Chúc mừng bạn đã đăng ký thành công."
+  errlogin: "Tài khoản hoặc mật khẩu không đúng."
 
   #layouts
   layouts:
@@ -9,6 +10,10 @@ vi:
       dstour: "Danh sách tour"
       baiviet: "Bài viết"
       dnhap: "Đăng nhập"
+      pf: "Thông tin tài khoản"
+      st: "Doi thong tin"
+      logout: "Đăng xuất"
+      user: "User"
 
     footer:
       about: "Về chúng tôi"
@@ -52,3 +57,20 @@ vi:
       pswc: "Nhập lại mật khẩu:"
       phonenumber: "Số điện thoại:"
       login: "Đã có tài khoản? Đăng nhập"
+
+  #sessions
+  sessions:
+    new:
+      login: "Đăng nhập"
+
+    form:
+      email: "Email:"
+      psw: "Mật khẩu:"
+      forgotpsw: "Quên mật khẩu ?"
+      remember: "Nhớ mật khẩu"
+      signupnow: "Đăng ký ngay!"
+      login: "Đăng nhập"
+
+    admin:
+      admin: "Admin"
+      test: "Hello Admin"

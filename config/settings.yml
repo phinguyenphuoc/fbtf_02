@@ -6,3 +6,6 @@ user:
 
   min_phone: 9
   max_phone: 11
+
+sessions:
+  remember_me: "1"

@@ -25,6 +25,6 @@
     <%= f.password_field :password_confirmation, class: "form-control form-control-fix" %>
     <span class="error-pattern"></span>
   </div>
-  <%= link_to t(".login"), root_path, class: "btn btn-link float-left" %>
+  <%= link_to t(".login"), login_path, class: "btn btn-link float-left" %>
   <%= f.submit yield(:button_text), class: "btn btn-primary float-right" %>
 <% end %>

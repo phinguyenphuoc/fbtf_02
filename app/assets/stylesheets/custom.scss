@@ -2,6 +2,20 @@
 
 $state-danger-text: #a94442 !default;
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 #error_explanation {
   color: white;
   ul {
@@ -80,7 +94,7 @@ $state-danger-text: #a94442 !default;
 }
 .container-search{
   height: 500px;
-  background: url(/img/bg-search.jpg) no-repeat;
+  background: url(bg-search.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -117,7 +131,7 @@ $state-danger-text: #a94442 !default;
   background-color: #1882B0;
 }
 .ul-choice{
-  list-style-image: url('/../img/checkmark.png');
+  list-style-image: url('checkmark.png');
 }
 .container-tour{
   padding-top: 10px;
