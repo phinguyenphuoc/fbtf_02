@@ -12,3 +12,6 @@ sessions:
 
 static_pages:
   hottour: 6
+
+tours:
+  per_page: 10

@@ -6,6 +6,10 @@ $state-danger-text: #a94442 !default;
   font-weight: 300; margin: 0
 }
 
+.pt-4{
+  background-color: #ECF0F5
+}
+
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -584,6 +588,26 @@ a:hover{
 .card-post-body{
   padding: 10px;
 }
+
+.bg-blue-tiki{
+  background-color: #189eff;
+}
+.text-white{
+  color: white;
+}
+.text-white:hover{
+  opacity: 0.8;
+}
+.badge-location{
+  position: absolute;
+  top: 8px;
+}
+.result-title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 #error_explanation{
   text-align: left;
 }
@@ -609,12 +633,7 @@ a:hover{
     color: white;
     width: 100%;
   }
-  .text-result{
-    margin-bottom: 0px;
-    padding: 10px 5px;
-    display: inline-block;
-  }
-  .text-price-search{
-    padding-right: 25px !important;
-  }
+}
+#error_explanation{
+  text-align: left;
 }
