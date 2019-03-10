@@ -2,6 +2,10 @@
 
 $state-danger-text: #a94442 !default;
 
+.hottour{
+  font-weight: 300; margin: 0
+}
+
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
@@ -579,6 +583,9 @@ a:hover{
 }
 .card-post-body{
   padding: 10px;
+}
+#error_explanation{
+  text-align: left;
 }
 @media screen and (max-width: 767px) {
   .nav-user{
