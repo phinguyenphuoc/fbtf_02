@@ -4,6 +4,7 @@
   </div>
   <div>
     <% @tours.each do |t| %>
+<<<<<<< HEAD
       <div class="card-tour-page">
         <div class="row">
           <div class="col-md-4">
@@ -34,6 +35,38 @@
           </div>
         </div>
       </div>
+=======
+    <div class="card-tour-page">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="img-card-tour-page">
+            <%= image_tag "#{t.avatar}", class: "w-100" %>
+            <div class="img-location"><i class="material-icons"
+              style="font-size: 16">location_on</i><%= t.name1 %> - <%= t.name %>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card-title-tour-page">
+            <h5 class="title-tour-page"><%= t.title %></h5>
+            <p><%= t(".loaihinh") %><%= t.des %></p>
+            <p><%= t(".soluong") %><%= t.soluong %></p>
+            <p><%= t(".time_start") %><%= (t.time_start).to_date %></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-2">
+            <p class="border-bottom pb-1 pt-1 m-0"><i class="fa fa-clock-o"></i>
+              <%= ((t.time_end).to_date - (t.time_start).to_date).to_i %> <%= t(".ngay") %>
+            </p>
+            <h5 class="card-price-tour-page">
+              <%= number_to_currency(t.price) %></h5>
+            <a href="#" class="btn btn-outline-primary w-100"><%= t(".detail") %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+>>>>>>> view locations and tours
     <% end %>
   </div>
   <%= will_paginate %>
