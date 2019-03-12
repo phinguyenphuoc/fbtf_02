@@ -2,12 +2,12 @@
   <div class="container pb-4">
     <div class="tour-hot-container">
       <div class="title-tour-hot">
-        <h3 class="hottour"><%= t(".hot_tour") %></h3>
+        <h3 class="hottour"><%= t(".newtour") %></h3>
       </div>
-      <%= link_to t(".view_all"), index_path, class: "float-right btn btn-link" %>
+      <%= link_to t("xemtatca"), index_path, class: "float-right btn btn-link" %>
     </div>
     <div class="row">
-      <% @hot_tour.each do |t| %>
+      <% @new_tour.each do |t| %>
         <div class="col-md-4">
           <%= link_to "#", class: "card text-left card-tour" do %>
             <div class="card-img-tour">
@@ -17,12 +17,11 @@
               </div>
             </div>
             <div class="card-body card-body-tour">
-              <h5 class="card-title"><%= t.description %></h5>
+              <h5 class="card-title"></h5>
             </div>
           <% end %>
         </div>
       <% end %>
-      </div>
     </div>
   </div>
 </div>
