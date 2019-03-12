@@ -4,6 +4,11 @@ vi:
   msgsuccess: "Chúc mừng bạn đã đăng ký thành công."
   errlogin: "Tài khoản hoặc mật khẩu không đúng."
   permission_denide: "Bạn không có quyền truy cập"
+  ngay: "Số ngày: "
+  hottour: "Tour nổi bật"
+  xemthem: "Xem thêm"
+  vnd: " VND"
+
   #layouts
   layouts:
     header:

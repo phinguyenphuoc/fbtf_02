@@ -9,3 +9,6 @@ user:
 
 sessions:
   remember_me: "1"
+
+static_pages:
+  hottour: 6
