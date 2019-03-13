@@ -1,0 +1,11 @@
+<tr>
+  <td><%= travelling.id %></td>
+  <td><%= travelling.location_start.name %></td>
+  <td><%= travelling.location_end.name %></td>
+  <td>
+    <%= link_to "edit", edit_admin_travelling_path(travelling) %>
+  </td>
+  <td>
+    <%= link_to "del", admin_travelling_path(travelling), method: :delete %>
+  </td>
+</tr>

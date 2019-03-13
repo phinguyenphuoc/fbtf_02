@@ -1,0 +1,29 @@
+<tr>
+  <td><%= tour.id %></td>
+  <td><%= tour.category.name%></td>
+  <td><%= tour.price.round %> VND</td>
+  <td>
+    <%= tour.travelling.location_start.name%>
+    -
+    <%= tour.travelling.location_end.name%>
+  </td>
+  <td>
+    <%= tour.time_start.strftime("%e/%-m/%y") %>
+    <%= tour.time_end.strftime("%e/%-m/%y") %>
+
+  </td>
+  <td><%= tour.max_quantity %></td>
+  <td><%= tour.recent_quantity %></td>
+  <td>
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </td>
+  <td>
+    <%= link_to t(".edit"), edit_admin_tour_path(tour) %>
+  </td>
+  <td>
+    <%= link_to t(".del"), admin_tour_path(tour), method: :delete %>
+  </td>
+</tr>
+

@@ -1,5 +1,6 @@
 size: 80
 location_per_page: 10
+travelling_per_page: 10
 user:
   max_email: 255
   min_pass: 6

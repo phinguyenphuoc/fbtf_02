@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     post "/locations", to: "locations#create"
     resources :users
     resources :locations
+    resources :travellings
+    resources :tours
   end
   resources :users
 end
