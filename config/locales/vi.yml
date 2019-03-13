@@ -17,6 +17,7 @@ vi:
   time:
     formats:
       defaut: "%H:%M %d/%m/%Y"
+      date: "%e/%m/%y"
 
     review_form:
       format: "image/jpeg,image/gif,image/png"
@@ -28,6 +29,14 @@ vi:
       unlike: "Unlike"
       like: "Like"
       likes: "Likes"
+
+  shared:
+    hottour:
+      hot_tour: "Tour nổi bật"
+      view_all: "Xem Tất Cả"
+
+    review_form:
+      format: "image/jpeg,image/gif,image/png"
 
   shared:
     search:
@@ -225,6 +234,22 @@ vi:
       travelling:
         edit: "Edit"
         del: "Delete"
+    tours:
+      tour:
+        edit: "Edit"
+        del: "Del"
+      index:
+        id: "Id"
+        category: "Category"
+        price: "Price"
+        travelling: "Travelling"
+        time: "Time"
+        max: "Max"
+        recent: "Recent"
+        rating: "Rating"
+        click: "Click here to create new tour"
+      new:
+        submit: "Submit"
     static_pages:
       show:
         welcome: "Xin chào"

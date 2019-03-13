@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :users
     resources :locations
     resources :travellings
+    resources :tours
   end
   resources :users
   resources :travellings
