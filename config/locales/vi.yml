@@ -5,6 +5,9 @@ vi:
   err_login: "Tài khoản hoặc mật khẩu không đúng."
   permission_denide: "Bạn không có quyền truy cập"
   date: "Số ngày: "
+  time:
+    formats:
+      defaut: "%H:%M %d/%m/%Y"
 
   shared:
     hottour:
