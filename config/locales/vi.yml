@@ -5,12 +5,15 @@ vi:
   err_login: "Tài khoản hoặc mật khẩu không đúng."
   permission_denide: "Bạn không có quyền truy cập"
   date: "Số ngày: "
-  review_success: "Cảm Ơn Đã Đánh Giá"
-  review_fail: "Review phải nhiều hơn 10 chữ"
+  review_success: "Cảm Ơn Đã Đánh Giá."
+  review_fail: "Review phải nhiều hơn 10 chữ."
   review_delete_success: "Xóa review thành công"
   review_delete_fail: "Xóa review thất bại"
   no_data: "Not Found 404"
-  like_fail: "Bạn đã like review này"
+  like_fail: "Bạn đã like review này."
+  booking_fail: "Bạn đã nhập quá số lượng cho phép."
+  booking_fail1: "Bạn phải nhập đầy đủ thông tin."
+  booking_success: "Quý khách đã đặt tour thành công. Chân thành cảm ơn!!!"
   fail: "Lỗi không xác định."
   no_data: "Not Found 404"
 
@@ -19,60 +22,22 @@ vi:
       defaut: "%H:%M %d/%m/%Y"
       date: "%e/%m/%y"
 
-    review_form:
-      format: "image/jpeg,image/gif,image/png"
+  #bookings
+  bookings:
+    new:
+      time_start: "Ngày khởi hành: "
+      price: "Giá tiền: "
+      booking_info: "Thông Tin Cá Nhân"
+      tour: "Thông Tin Tour"
+      quantity: "Số lượng có thể đặt: "
 
-  reviews:
-    review:
-      post: "Đã đăng"
-      ago: "trước"
-      unlike: "Unlike"
-      like: "Like"
-      likes: "Likes"
-
-  shared:
-    hottour:
-      hot_tour: "Tour nổi bật"
-      view_all: "Xem Tất Cả"
-
-  shared:
-    hottour:
-      hot_tour: "Tour nổi bật"
-      view_all: "Xem Tất Cả"
-    review_form:
-      format: "image/jpeg,image/gif,image/png"
-
-  shared:
-    search:
-      title: "Trải nghiệm kì nghỉ tuyệt vời"
-      title2: "Tìm tour giá tốt nhất"
-
-  ngay: "Số ngày: "
-  hottour: "Tour nổi bật"
-  xemthem: "Xem thêm"
-  vnd: " VND"
-  err_location: "Nhập Sai"
-  add_location_success: "Thành Công"
-  ngay: "Số ngày: "
-  hottour: "Tour nổi bật"
-  xemthem: "Xem thêm"
-  vnd: " VND"
-  err_location: "Nhập Sai"
-  add_location_success: "Thành Công"
-  update_location_success: "Thay đổi thành công"
-  update_location_failed: "Thay đổi không thành công"
-  del_location_success: "Xóa địa điểm thành công"
-  del_location_failed: "Xóa địa điểm thất bại"
-  update_travelling_success: "Thay đổi thành công"
-  update_travelling_failed: "Thay đổi không thành công"
-  del_travelling_success: "Xóa travel thành công"
-  del_travelling_failed: "Xóa travel thất bại"
-  add_travelling_success: "Thành Công"
-  err_tour: "Khong tim thay tour"
-  update_tour_success: "Thay đổi thành công"
-  update_tour_failed: "Thay đổi không thành công"
-  del_tour_success: "Xóa tour thành công"
-  del_tour_failed: "Xóa tour thất bại"
+    booking:
+      name: "*Họ và tên:"
+      phone_number: "*Số điện thoại:"
+      address: "*Địa chỉ:"
+      quantity: "*Số lượng khách:"
+      note: "Ghi chú:"
+      note1: "*Quý khách vui lòng nhập đầy đủ thông tin."
 
   #layouts
   layouts:
@@ -109,34 +74,21 @@ vi:
       email1: "email"
       location_on: "location_on"
 
-  #static_pages
-  static_pages:
-    home:
-      title: "Trang chủ"
-      new_tour: "Tour mới"
-      view_all: "Xem Tất Cả"
+  #reviews
+  reviews:
+    review:
+      post: "Đã đăng"
+      ago: "trước"
+      unlike: "Unlike"
+      like: "Like"
+      likes: "Likes"
+    review_form:
+      format: "image/jpeg,image/gif,image/png"
 
-    new_tour:
-      location_name: "Địa điểm: "
-
-    new_tour:
-      new_tour: "Tour mới"
-      view_all: "Xem Tất Cả"
-      location_name: "Địa điểm: "
-
-  #users
-  users:
-    new:
-      signup: "Đăng ký"
-      create: "Tạo tài khoản"
-
-    form:
-      name: "Họ và tên:"
-      email: "Email:"
-      psw: "Mật khẩu:"
-      pswc: "Nhập lại mật khẩu:"
-      phone_number: "Số điện thoại:"
-      login: "Đã có tài khoản? Đăng nhập"
+  shared:
+    search:
+      title: "Trải nghiệm kì nghỉ tuyệt vời"
+      title2: "Tìm tour giá tốt nhất"
 
   #sessions
   sessions:
@@ -155,6 +107,84 @@ vi:
       admin: "Admin"
       test: "Hello Admin"
 
+  #static_pages
+  static_pages:
+    home:
+      title: "Trang chủ"
+      new_tour: "Tour mới"
+      view_all: "Xem Tất Cả"
+
+    new_tour:
+      new_tour: "Tour mới"
+      view_all: "Xem Tất Cả"
+      location_name: "Địa điểm: "
+
+  #tours
+  tours:
+    show:
+      cofirm: "ĐẶT TOUR"
+      quantity: "Số khách: (còn"
+      slot: "chỗ)"
+      review: "Nhận Xét"
+      send: "Gửi"
+      tour_details: "Thông Tin Tour"
+
+    tour_details:
+      dates: "Ngày"
+      age_limit: "Giới Hạn Tuổi: 5"
+      hotel: "Khách Sạn"
+      vehicle: "Phương Tiện: "
+      time_start: "Khởi Hành: "
+      content: "Lịch Trình Tour"
+      updating: "Đang cập nhật ..."
+
+    tour:
+      tours: "Tours"
+      locations: "ĐIỂM ĐẾN YÊU THÍCH"
+      tours: "Tours"
+      category: "Loại Hình: "
+      count: "Số Chỗ Đã Đặt: "
+      time_start: "Khởi Hành: "
+      detail: "Chi tiết"
+      dates: "Ngày"
+
+  travellings:
+    index:
+      tours: "Danh Sách Tour"
+      locations: "ĐIỂM ĐẾN YÊU THÍCH"
+
+  #users
+  users:
+    new:
+      signup: "Đăng ký"
+      create: "Tạo tài khoản"
+
+    form:
+      name: "Họ và tên:"
+      email: "Email:"
+      psw: "Mật khẩu:"
+      pswc: "Nhập lại mật khẩu:"
+      phone_number: "Số điện thoại:"
+      login: "Đã có tài khoản? Đăng nhập"
+
+  #admin
+  err_location: "Nhập Sai"
+  add_location_success: "Thành Công"
+  update_location_success: "Thay đổi thành công"
+  update_location_failed: "Thay đổi không thành công"
+  del_location_success: "Xóa địa điểm thành công"
+  del_location_failed: "Xóa địa điểm thất bại"
+  update_travelling_success: "Thay đổi thành công"
+  update_travelling_failed: "Thay đổi không thành công"
+  del_travelling_success: "Xóa travel thành công"
+  del_travelling_failed: "Xóa travel thất bại"
+  add_travelling_success: "Thành Công"
+  err_tour: "Khong tim thay tour"
+  update_tour_success: "Thay đổi thành công"
+  update_tour_failed: "Thay đổi không thành công"
+  del_tour_success: "Xóa tour thành công"
+  del_tour_failed: "Xóa tour thất bại"
+
   admins:
     show:
       admin: "Admin"
@@ -171,38 +201,6 @@ vi:
     footer:
       copyright: Copyright
       website: Framgia website
-
-  travellings:
-    index:
-      tours: "Danh Sách Tour"
-      locations: "ĐIỂM ĐẾN YÊU THÍCH"
-
-  tours:
-    show:
-      hotel: "Khách Sạn"
-      age_limit: "Giới Hạn Tuổi: 5"
-      vehicle: "Phương Tiện: "
-      time_start: "Khởi Hành: "
-      content: "Lịch Trình Tour"
-      updating: "Đang cập nhật ..."
-      your_review: "Viết Nhận Xét Của Bạn"
-      cofirm: "ĐẶT TOUR"
-      quantity: "Số khách: (còn"
-      slot: "chỗ)"
-      review: "Nhận Xét"
-      send: "Gửi"
-      dates: "Ngày"
-      tour_details: "Thông Tin Tour"
-
-    tour:
-      tours: "Tours"
-      locations: "ĐIỂM ĐẾN YÊU THÍCH"
-      tours: "Tours"
-      category: "Loại Hình: "
-      count: "Số Chỗ Đã Đặt: "
-      time_start: "Khởi Hành: "
-      detail: "Chi tiết"
-      dates: "Ngày"
 
   admin:
     admin_base:

@@ -26,3 +26,9 @@ review:
 likes:
   count_like: 1
 
+booking:
+  min_phone: 9
+  max_phone: 11
+  max_name: 50
+  quantity_value: 1
+  quantity_min: 1
