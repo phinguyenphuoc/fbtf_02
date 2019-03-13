@@ -17,6 +17,12 @@ vi:
     search:
       title: "Trải nghiệm kì nghỉ tuyệt vời"
       title2: "Tìm tour giá tốt nhất"
+  ngay: "Số ngày: "
+  hottour: "Tour nổi bật"
+  xemthem: "Xem thêm"
+  vnd: " VND"
+  err_location: "Nhập Sai"
+  add_location_sucess: "Thành Công"
 
   #layouts
   layouts:
@@ -89,23 +95,6 @@ vi:
       admin: "Admin"
       test: "Hello Admin"
 
-  admins:
-    show:
-      admin: "Admin"
-      profile: "Thông tin"
-      logout: "Đăng xuất"
-      welcome: "Xin chào"
-    sidebar:
-      admin: "Admin"
-      dashboard: "Dashboard"
-      interface: "Interface"
-      manage: "Quản lí"
-      user: "Người dùng"
-      tour: "Tour"
-    footer:
-      copyright: Copyright
-      website: Framgia website
-
   tours:
     index:
       tours: "Tours"
@@ -120,3 +109,35 @@ vi:
       time_start: "Khởi Hành: "
       detail: "Chi tiết"
       dates: "ngày"
+
+  admin:
+    admin_base:
+      header:
+        admin: "Admin"
+        profile: "Thông tin"
+        logout: "Đăng xuất"
+        search: "Search for..."
+      sidebar:
+        admin: "Admin"
+        dashboard: "Dashboard"
+        interface: "Interface"
+        manage: "Quản lí"
+        user: "Người dùng"
+        tour: "Tour"
+        location: "Địa điểm"
+      footer:
+        copyright: Copyright
+        website: Framgia website
+    locations:
+      form:
+        new: Add new location
+        submit: Submit
+      location:
+        edit: Edit
+        del: Delete
+      index:
+        id: ID
+        name: NAME
+    static_pages:
+      show:
+        welcome: "Xin chào"

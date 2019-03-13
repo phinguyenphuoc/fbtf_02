@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   namespace :admin do
     root "static_pages#show"
+    get "/locations", to: "locations#index"
+    post "/locations", to: "locations#create"
     resources :users
+    resources :locations
   end
   resources :users
 end
