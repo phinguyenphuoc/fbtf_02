@@ -180,7 +180,7 @@ th{
 }
 .container-search{
   height: 500px;
-  background: url(/img/bg-search.jpg) no-repeat;
+  background: url(bg-search.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
@@ -217,7 +217,7 @@ th{
   background-color: #007bff;
 }
 .ul-choice{
-  list-style-image: url('/../img/checkmark.png');
+  list-style-image: url('checkmark.png');
 }
 .container-tour{
   padding-top: 10px;
@@ -413,7 +413,7 @@ th{
   padding: 15px;
 }
 .bg-login{
-  background: url(../image/bg-login.jpg) no-repeat;
+  background: url(bg-login.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   height: 850px;

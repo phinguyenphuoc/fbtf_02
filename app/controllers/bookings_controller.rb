@@ -2,7 +2,6 @@ class BookingsController < ApplicationController
   before_action :find_tour, only: [:new, :create, :destroy]
   before_action :check_quanlity, :load_booking, only: :create
   before_action :find_booking, only: :destroy
-  # before_action :find_quantity, only: :show
 
   def new
     @booking = current_user.bookings.new

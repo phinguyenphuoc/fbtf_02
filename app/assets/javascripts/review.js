@@ -1,5 +1,5 @@
-// ratting
 $(document).on('turbolinks:load', function() {
+  // ratting
   $('.review-rating').raty({
     readOnly: true,
     path: '/assets/',
@@ -7,6 +7,7 @@ $(document).on('turbolinks:load', function() {
       return $(this).attr('data-score');
     },
   });
+
   $('#review-rating-form').raty({
     path: '/assets',
     scoreName: 'review[rating]',
