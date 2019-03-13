@@ -1,0 +1,13 @@
+<%= form_for @review do |f| %>
+  <!-- Rating Stars Box -->
+  <div class="form-group">
+    <label><%= t(".review") %></label>&nbsp;
+    <span style="color: red">*</span>
+    <%= f.text_area :content,class:"form-control form-control-fix",rows: "3" %>
+    <%= hidden_field_tag :id, @tour_details.id %>
+  </div>
+  <%= f.submit "send", class: "btn btn-secondary" %>
+  <span class="picture">
+    <%= f.file_field :picture, accept: t(".format") %>
+  </span>
+<% end %>

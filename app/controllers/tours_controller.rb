@@ -1,40 +1,17 @@
 class ToursController < ApplicationController
-  before_action :hot_tour, only: :index
+  before_action :load_tour_details, :current_user, only: :show
 
-  def index
-    hot_tour
-    if params[:name_end]
-      if_tours
-    else
-      else_tours
-    end
+  def show
+    @review  = current_user.reviews.build if logged_in?
+    @reviews = @tour_details.reviews.order_reviews
   end
 
   private
 
-  def hot_tour
-    @travel_end = Travelling.location_end.join_tour
-                            .join_location_start
-                            .join_location_end
-                            .order_count.group_id_end
-  end
-
-  def if_tours
-    @tours = Travelling.list_tours
-                       .join_tour
-                       .join_location_start
-                       .join_location_end
-                       .where("l2.name = ?", params[:name_end])
-                       .paginate(page: params[:page],
-                        per_page: Settings.tours.per_page)
-  end
-
-  def else_tours
-    @tours = Travelling.list_tours
-                       .join_tour
-                       .join_location_start
-                       .join_location_end
-                       .paginate(page: params[:page],
-                        per_page: Settings.tours.per_page)
+  def load_tour_details
+    @tour_details = Tour.find_by id: params[:id]
+    return if @tour_details
+    flash[:danger] = t "no_data"
+    redirect_to tour_path
   end
 end
