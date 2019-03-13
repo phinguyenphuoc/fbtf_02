@@ -25,7 +25,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit :content, :picture
+    params.require(:review).permit :content, :picture, :rating
   end
 
   def load_tour

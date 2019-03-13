@@ -38,6 +38,7 @@ vi:
       quantity: "*Số lượng khách:"
       note: "Ghi chú:"
       note1: "*Quý khách vui lòng nhập đầy đủ thông tin."
+      submit: "Xác nhận"
 
   #layouts
   layouts:
@@ -128,6 +129,8 @@ vi:
       review: "Nhận Xét"
       send: "Gửi"
       tour_details: "Thông Tin Tour"
+      price: "Giá tiền: "
+      quantity: "Số chỗ còn lại: "
 
     tour_details:
       dates: "Ngày"
@@ -137,6 +140,7 @@ vi:
       time_start: "Khởi Hành: "
       content: "Lịch Trình Tour"
       updating: "Đang cập nhật ..."
+      avg_rating: "Điểm đánh giá trung bình: "
 
     tour:
       tours: "Tours"
@@ -148,6 +152,7 @@ vi:
       detail: "Chi tiết"
       dates: "Ngày"
 
+  #travellings
   travellings:
     index:
       tours: "Danh Sách Tour"
@@ -201,6 +206,11 @@ vi:
     footer:
       copyright: Copyright
       website: Framgia website
+
+  travellings:
+    index:
+      tours: "Danh Sách Tour"
+      locations: "ĐIỂM ĐẾN YÊU THÍCH"
 
   admin:
     admin_base:
