@@ -35,6 +35,10 @@ vi:
       hot_tour: "Tour nổi bật"
       view_all: "Xem Tất Cả"
 
+  shared:
+    hottour:
+      hot_tour: "Tour nổi bật"
+      view_all: "Xem Tất Cả"
     review_form:
       format: "image/jpeg,image/gif,image/png"
 
@@ -43,6 +47,16 @@ vi:
       title: "Trải nghiệm kì nghỉ tuyệt vời"
       title2: "Tìm tour giá tốt nhất"
 
+  ngay: "Số ngày: "
+  hottour: "Tour nổi bật"
+  xemthem: "Xem thêm"
+  vnd: " VND"
+  err_location: "Nhập Sai"
+  add_location_success: "Thành Công"
+  ngay: "Số ngày: "
+  hottour: "Tour nổi bật"
+  xemthem: "Xem thêm"
+  vnd: " VND"
   err_location: "Nhập Sai"
   add_location_success: "Thành Công"
   update_location_success: "Thay đổi thành công"
@@ -54,6 +68,11 @@ vi:
   del_travelling_success: "Xóa travel thành công"
   del_travelling_failed: "Xóa travel thất bại"
   add_travelling_success: "Thành Công"
+  err_tour: "Khong tim thay tour"
+  update_tour_success: "Thay đổi thành công"
+  update_tour_failed: "Thay đổi không thành công"
+  del_tour_success: "Xóa tour thành công"
+  del_tour_failed: "Xóa tour thất bại"
 
   #layouts
   layouts:
@@ -249,6 +268,8 @@ vi:
         rating: "Rating"
         click: "Click here to create new tour"
       new:
+        submit: "Submit"
+      edit:
         submit: "Submit"
     static_pages:
       show:
