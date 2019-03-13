@@ -24,6 +24,17 @@ vi:
   err_location: "Nhập Sai"
   add_location_sucess: "Thành Công"
 
+  ngay: "Số ngày: "
+  hottour: "Tour nổi bật"
+  xemthem: "Xem thêm"
+  vnd: " VND"
+  err_location: "Nhập Sai"
+  add_location_sucess: "Thành Công"
+  update_location_sucess: "Thay đổi thành công"
+  update_location_failed: "Thay đổi không thành công"
+  del_location_sucess: "Xóa địa điểm thành công"
+  del_location_failed: "Xóa địa điểm thất bại"
+
   #layouts
   layouts:
     header:
@@ -138,6 +149,21 @@ vi:
       index:
         id: ID
         name: NAME
+        copyright: "Copyright"
+        website: "Framgia website"
+    locations:
+      form:
+        new: "Add new location"
+        submit: "Submit"
+      location:
+        edit: "Edit"
+        del: "Delete"
+      index:
+        id: "ID"
+        name: "NAME"
+      edit:
+        new: "Change Name"
+        submit: "Update"
     static_pages:
       show:
         welcome: "Xin chào"

@@ -1,4 +1,30 @@
 class Admin::LocationsController < Admin::AdminBaseController
+  before_action :check_permission
+  before_action :load_location, except: %i(index create)
+
+  def show; end
+
+  def edit; end
+
+  def update
+    if @location.update_attributes location_params
+      flash[:sucess] = t "update_location_sucess"
+      redirect_to admin_locations_path
+    else
+      flash[:danger] = t "update_location_failed"
+      render :edit
+    end
+  end
+
+  def destroy
+    if @location.destroy
+      flash[:sucess] = t "del_location_sucess"
+    else
+      flash[:del_location_failed] = t "update_location_failed"
+    end
+    redirect_to admin_locations_path
+  end
+
   def create
     @location = Location.new location_params
     if @location.save
@@ -19,5 +45,12 @@ class Admin::LocationsController < Admin::AdminBaseController
 
   def location_params
     params.require(:location).permit :name
+  end
+
+  def load_location
+    @location = Location.find_by id: params[:id]
+    return if @location
+    flash[:danger] = t "err_location"
+    redirect_to admin_locations_path
   end
 end
