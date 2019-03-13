@@ -7,12 +7,11 @@ vi:
   ngay: "Số ngày: "
   hottour: "Tour nổi bật"
   xemthem: "Xem thêm"
-  vnd: " VND"
 
   #layouts
   layouts:
     header:
-      dstour: "Danh sách tour"
+      dstour: "Tours"
       baiviet: "Bài viết"
       dnhap: "Đăng nhập"
       pf: "Thông tin tài khoản"
@@ -96,3 +95,17 @@ vi:
     footer:
       copyright: Copyright
       website: Framgia website
+
+  tours:
+    index:
+      tours: "Tours"
+
+    locations:
+      locations: "ĐIỂM ĐẾN YÊU THÍCH"
+
+    tours:
+      tours: "Tours"
+      loaihinh: "Loại Hình: "
+      soluong: "Số Chỗ Đã Đặt: "
+      time_start: "Khởi Hành: "
+      detail: "Chi tiết"
