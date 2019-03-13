@@ -19,22 +19,17 @@
         <i class="fas fa-plane" title="Di Chuyển Bằng Máy Bay"></i>
       </p>
       <p class="general-info-item">
-        <i class="fa fa-exclamation-circle" title="Age Limit" ></i>
-        <%= t(".age_limit") %>
-      </p>
-      <p class="general-info-item">
         <i class="fa fa-hotel"></i>
         <%= t(".hotel") %>
       </p>
-    </div>
-    <div>
-      <p class="m-0"><i class="fa fa-flag-checkered"></i>
+      <p class="general-info-item"><i class="fa fa-flag-checkered"></i>
         <%= t(".time_start") %>
         <%= l @tour_details.time_start, format: :defaut %>
       </p>
-      <br>
+    </div>
+    <div>
       <p class="m-0"><i class="fa fa-star checked"></i>
-        <%= t(".avg_rating") %> <%= @avg_rating %>
+        <%= t(".avg_rating") %><%= @avg_rating %>
         <div class='review-rating' data-score=<%= @avg_rating %>></div>
       </p>
     </div>

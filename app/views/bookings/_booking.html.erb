@@ -1,30 +1,23 @@
-<%= form_for @booking do |f| %>
-  <div class="form-group">
-    <%= f.label :name, t(".name") %>
-    <%= f.text_field :name, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :phonenumber, t(".phone_number") %>
-    <%= f.telephone_field :phonenumber, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :address, t(".address") %>
-    <%= f.text_field :address, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :quantity, t(".quantity") %>
-    <%= f.number_field :quantity, value: Settings.booking.quantity_value,
-     min: Settings.booking.quantity_min, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :note, t(".note") %>
-    <%= f.text_area :note, class: "form-control", rows: "3" %>
-  </div>
-  <%= hidden_field_tag :tour_id, @tour.id %>
-  <p class="m-0"><%= t(".note1") %></p>
-  <%= f.submit t(".submit"), class: "btn btn-primary float-right" %>
-<% end %>
+<tbody>
+  <tr>
+    <th>
+      <%= booking.tour.travelling.location_start.name%> -
+      <%= booking.tour.travelling.location_end.name%>
+    </th>
+    <th>
+      <%= l booking.tour.time_start, format: :defaut %>
+    </th>
+    <th>
+      <%= l booking.created_at, format: :defaut %></th>
+    <th>
+      <%= booking.quantity %>
+    </th>
+    <th>
+      <%= number_to_currency(booking.bill) %>
+    </th>
+    <th>
+      <%= link_to "delete", delete_path(booking_id: booking.id, tour_id: booking.tour.id),
+        method: :delete, class: "list-group-item list-group-item-action list-location" %>
+    </th>
+  </tr>
+</tbody>

@@ -15,8 +15,10 @@
           </div>
           <% end %>
           <div class="scrollbar">
+            <h2 style="text-align: center"><%= t(".count",count: @reviews.count) %></h2>
             <%= render @reviews %>
           </div>
+          <%= will_paginate @reviews %>
         </div>
       </div>
       <div class="col-md-4 order-sm-first order-first">
