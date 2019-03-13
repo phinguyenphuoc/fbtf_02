@@ -6,3 +6,12 @@ $('#micropost_picture').bind('change', function() {
   }
 });
 
+// like_button
+$(document).foundation();
+
+$(function() {
+  $('.button-like')
+    .bind('click', function(event) {
+      $(".button-like").toggleClass('liked');
+    })
+});
