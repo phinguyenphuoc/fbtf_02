@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if @user&.authenticate params[:session][:password]
       login @user
     else
-      flash.now[:danger] = t "errlogin"
+      flash.now[:danger] = t "err_login"
       render :new
     end
   end
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
   def load_user
     @user = User.find_by email: params[:session][:email].downcase
     return if @user
-    flash[:danger] = t "errlogin"
+    flash[:danger] = t "err_login"
   end
 
   def login _user

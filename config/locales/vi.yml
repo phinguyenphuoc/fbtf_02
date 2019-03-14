@@ -1,42 +1,52 @@
 vi:
   base_title: "S Travel"
   errs: "Có %{errors_count}."
-  msgsuccess: "Chúc mừng bạn đã đăng ký thành công."
-  errlogin: "Tài khoản hoặc mật khẩu không đúng."
+  msg_success: "Chúc mừng bạn đã đăng ký thành công."
+  err_login: "Tài khoản hoặc mật khẩu không đúng."
   permission_denide: "Bạn không có quyền truy cập"
-  ngay: "Số ngày: "
-  hottour: "Tour nổi bật"
-  xemthem: "Xem thêm"
+  date: "Số ngày: "
+
+  shared:
+    hottour:
+      hot_tour: "Tour nổi bật"
+      view_all: "Xem Tất Cả"
+
+    new_tours:
+      newtour: "Tour mới"
+
+    search:
+      title: "Trải nghiệm kì nghỉ tuyệt vời"
+      title2: "Tìm tour giá tốt nhất"
 
   #layouts
   layouts:
     header:
-      dstour: "Tours"
-      baiviet: "Bài viết"
-      dnhap: "Đăng nhập"
-      pf: "Thông tin tài khoản"
-      st: "Doi thong tin"
+      tours: "Tours"
+      reviews: "Bài viết"
+      login: "Đăng nhập"
+      profile: "Thông Tin Tài Khoản"
+      inf_tours: "Thông Tin Đặt Tours"
       logout: "Đăng xuất"
       user: "User"
 
     footer:
       about: "Về chúng tôi"
-      noidung: "Hệ thống đặt tour du lịch trực tuyến hàng đầu Việt Nam"
-      lienketlq: "Liên kết liên quan"
-      dieukhoan: "Điều kiện & Điều khoản"
-      quyche: "Quy chế hoạt động"
-      cauhoi: "Câu hỏi thường gặp"
-      khuyenmai: "Tin khuyến mãi"
-      lienhe: "Liên hệ"
-      tuvan: "Tư vấn miễn phí (24/7):"
-      sdttuvan: "0123456789"
+      content: "Hệ thống đặt tour du lịch trực tuyến hàng đầu Việt Nam"
+      link: "Liên kết liên quan"
+      dk: "Điều kiện & Điều khoản"
+      qc: "Quy chế hoạt động"
+      question: "Câu hỏi thường gặp"
+      deal: "Tin khuyến mãi"
+      contact: "Liên hệ"
+      sp: "Tư vấn miễn phí (24/7):"
+      contact_phone1: "0123456789"
       gopy: "Góp ý, phản ánh (8h00 - 22h00):"
-      sdtgopy: "0987654321"
-      vanphong: "Văn phòng"
+      contact_phone: "0987654321"
+      vp: "Văn phòng"
       vp1: "13F Keangnam Hanoi Landmark 72 Tower, Plot E6, Pham Hung Road, Nam Tu Liem Dist., Ha Noi"
       vp2: "4F, FHome Building, 16 Ly Thuong Kiet Str., Hai Chau district, Da Nang"
       vp3: "8F Nice building, 467 Dien Bien Phu Str., Ward 25, Binh Thanh district, HCMC"
-      lkkhac: "Liên kết khác"
+      another_link: "Liên kết khác"
       email: "Email: hotro@stravel.com"
       youtube: "Youtube: S Travel"
       fb: "Fanpage: fb.com/thanhdat128"
@@ -59,7 +69,7 @@ vi:
       email: "Email:"
       psw: "Mật khẩu:"
       pswc: "Nhập lại mật khẩu:"
-      phonenumber: "Số điện thoại:"
+      phone_number: "Số điện thoại:"
       login: "Đã có tài khoản? Đăng nhập"
 
   #sessions
@@ -70,9 +80,9 @@ vi:
     form:
       email: "Email:"
       psw: "Mật khẩu:"
-      forgotpsw: "Quên mật khẩu ?"
+      forgot_psw: "Quên mật khẩu ?"
       remember: "Nhớ mật khẩu"
-      signupnow: "Đăng ký ngay!"
+      signup_now: "Đăng ký ngay!"
       login: "Đăng nhập"
 
     admin:
@@ -105,7 +115,8 @@ vi:
 
     tours:
       tours: "Tours"
-      loaihinh: "Loại Hình: "
-      soluong: "Số Chỗ Đã Đặt: "
+      category: "Loại Hình: "
+      count: "Số Chỗ Đã Đặt: "
       time_start: "Khởi Hành: "
       detail: "Chi tiết"
+      dates: "ngày"
