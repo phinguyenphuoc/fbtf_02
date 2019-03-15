@@ -1,6 +1,9 @@
 class Travelling < ApplicationRecord
-  has_many :tours, dependent: :destroy
-  belongs_to :location
+  has_many :tours
+  belongs_to :locations_name_start, class_name: Location.name,
+    foreign_key: :location_start_id
+  belongs_to :locations_name_end, class_name: Location.name,
+    foreign_key: :location_end_id
 
   # select_hot_tour
   scope :select_hot_tour, (lambda do
