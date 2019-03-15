@@ -1,8 +1,8 @@
 class Travelling < ApplicationRecord
   has_many :tours
-  belongs_to :locations_name_start, class_name: Location.name,
+  belongs_to :location_start, class_name: Location.name,
     foreign_key: :location_start_id
-  belongs_to :locations_name_end, class_name: Location.name,
+  belongs_to :location_end, class_name: Location.name,
     foreign_key: :location_end_id
 
   # select_hot_tour
