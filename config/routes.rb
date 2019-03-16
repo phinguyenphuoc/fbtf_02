@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root "static_pages#home"
 
-  get "/index", to: "tours#index"
-  get "/tour_details", to: "tours#show"
+  get "/index", to: "travellings#index"
+  get "/show", to: "travellings#show"
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
   get "/login", to: "sessions#new"
@@ -16,4 +16,7 @@ Rails.application.routes.draw do
     resources :locations
   end
   resources :users
+  resources :travellings
+  resources :tours
+  resources :reviews
 end

@@ -1,1 +1,91 @@
-<%= render "tour_details" %>
+<% provide :title, t(".tour_details") %>
+<div class="pb-4 pt-4">
+  <div class="container">
+    <div class="title-name-tour-detail">
+      <h2><%= @tour_details.title %></h2>
+    </div>
+    <div class="row">
+      <div class="col-md-8 order-md-first">
+        <div class="border">
+          <div>
+            <%= image_tag "#{@tour_details.avatar}", class: "w-100" %>
+          </div>
+          <div class="general-info">
+            <div>
+              <p class="general-info-item">
+                <i class="fa fa-map-marker" title="Điểm Đến" ></i>
+                <%= @tour_details.travelling.location_end.name %>
+              </p>
+              <p class="general-info-item">
+                <i class="fa fa-clock-o" title="Số Ngày"></i>
+                <%= ((@tour_details.time_end).to_date - (@tour_details.time_start).to_date).to_i %> <%= t(".dates") %>
+              </p>
+              <p class="general-info-item">
+                <i class="fa fa-send" title="Phương Tiện" ></i>
+                <%= t(".vehicle") %>
+                <i class="fas fa-bus" title="Di Chuyển Bằng Ô Tô"></i>
+                <i class="fas fa-plane" title="Di Chuyển Bằng Máy Bay"></i>
+              </p>
+              <p class="general-info-item">
+                <i class="fa fa-exclamation-circle" title="Age Limit" ></i>
+                <%= t(".age_limit") %>
+              </p>
+              <p class="general-info-item">
+                <i class="fa fa-hotel"></i>
+                <%= t(".hotel") %>
+              </p>
+            </div>
+            <p class="m-0"><i class="fa fa-flag-checkered"></i>
+              <%= t(".time_start") %>
+              <%= l @tour_details.time_start, format: :defaut %>
+            </p>
+          </div>
+          <div class="container-detail-tour">
+            <h2><%= t(".content") %></h2>
+            <%= t(".updating") %>
+          </div>
+        </div>
+        <div class="border mt-4">
+          <% if logged_in? %>
+          <div class="container-comment border-bottom">
+            <h4><%= t(".your_review") %></h4>
+            <%= render "reviews/review_form" %>
+          </div>
+          <% end %>
+          <%= render "reviews/review" %>
+        </div>
+      </div>
+          <div class="col-md-4 order-sm-first order-first">
+            <% if logged_in? %>
+            <div class="container-book-tour sticky-top">
+              <h2 class="price-tour-detail" id="price">
+                <%= @tour_details.price%>
+              </h2>
+              <div class="form-group">
+                <label><%= t(".quantity") %>
+                  <%= (@tour_details.max_quantity - @tour_details.recent_quantity) %>
+                  <%= t(".slot") %>
+                </label>
+                <select class="form-control form-control-fix", id="mySelect", onclick="myFunction()">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+            </div>
+            <button class="btn btn-primary w-100">
+              <%= t(".cofirm") %>
+            </button>
+          </div>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</div>
+

@@ -1,0 +1,23 @@
+<div class="scrollbar">
+  <% @reviews.each do |r| %>
+    <div class="media pt-2 pl-4 pr-4">
+      <img src="https://png.icons8.com/ios/40/777777/user-male-circle-filled.png"
+      class="material-icons mr-3 mt-1 rounded-circle" height="48x" width="48px" />
+      <div class="media-body">
+        <h5>
+          <%= r.user.name %>&nbsp;&nbsp;&nbsp;<small><i>
+          <%= t(".post") %>
+          <%= time_ago_in_words(r.created_at) %>
+          <%= t(".ago")%></i></small>
+        </h5>
+        <p><%= r.content %></p>
+        <%= image_tag "#{r.picture}", class: "w-100" %>
+        <% if current_user?(r.user) %>
+          <%= link_to "delete", r, method: :delete,
+          data: { confirm: "You sure?" } %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+

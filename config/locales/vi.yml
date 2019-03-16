@@ -5,18 +5,20 @@ vi:
   err_login: "Tài khoản hoặc mật khẩu không đúng."
   permission_denide: "Bạn không có quyền truy cập"
   date: "Số ngày: "
+  review_success: "Cảm Ơn Đã Đánh Giá"
+  review_fail: "Error"
+  no_data: "Not Found 404"
+
   time:
     formats:
       defaut: "%H:%M %d/%m/%Y"
 
+  reviews:
+    review:
+      post: "Đã đăng"
+      ago: "trước"
+
   shared:
-    hottour:
-      hot_tour: "Tour nổi bật"
-      view_all: "Xem Tất Cả"
-
-    new_tours:
-      newtour: "Tour mới"
-
     search:
       title: "Trải nghiệm kì nghỉ tuyệt vời"
       title2: "Tìm tour giá tốt nhất"
@@ -78,6 +80,11 @@ vi:
     home:
       title: "Trang chủ"
 
+    new_tour:
+      new_tour: "Tour mới"
+      view_all: "Xem Tất Cả"
+      location_name: "Địa điểm: "
+
   #users
   users:
     new:
@@ -109,20 +116,54 @@ vi:
       admin: "Admin"
       test: "Hello Admin"
 
-  tours:
-    index:
-      tours: "Tours"
+  admins:
+    show:
+      admin: "Admin"
+      profile: "Thông tin"
+      logout: "Đăng xuất"
+      welcome: "Xin chào"
+    sidebar:
+      admin: "Admin"
+      dashboard: "Dashboard"
+      interface: "Interface"
+      manage: "Quản lí"
+      user: "Người dùng"
+      tour: "Tour"
+    footer:
+      copyright: Copyright
+      website: Framgia website
 
-    locations:
+  travellings:
+    index:
+      tours: "Danh Sách Tour"
       locations: "ĐIỂM ĐẾN YÊU THÍCH"
 
-    tours:
+  tours:
+    show:
+      hotel: "Khách Sạn"
+      age_limit: "Giới Hạn Tuổi: 5"
+      vehicle: "Phương Tiện: "
+      time_start: "Khởi Hành: "
+      content: "Lịch Trình Tour"
+      updating: "Đang cập nhật ..."
+      your_review: "Viết Nhận Xét Của Bạn"
+      cofirm: "ĐẶT TOUR"
+      quantity: "Số khách: (còn"
+      slot: "chỗ)"
+      review: "Nhận Xét"
+      send: "Gửi"
+      dates: "Ngày"
+      tour_details: "Thông Tin Tour"
+
+    tour:
+      tours: "Tours"
+      locations: "ĐIỂM ĐẾN YÊU THÍCH"
       tours: "Tours"
       category: "Loại Hình: "
       count: "Số Chỗ Đã Đặt: "
       time_start: "Khởi Hành: "
       detail: "Chi tiết"
-      dates: "ngày"
+      dates: "Ngày"
 
   admin:
     admin_base:
