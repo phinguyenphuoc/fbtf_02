@@ -4,7 +4,7 @@ class ToursController < ApplicationController
 
   def show
     @review  = current_user.reviews.build if logged_in?
-    @reviews = @tour_details.reviews.order(created_at: :desc)
+    @reviews = @tour_details.reviews.order_reviews
   end
 
   private

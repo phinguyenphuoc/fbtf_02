@@ -5,8 +5,9 @@ vi:
   err_login: "Tài khoản hoặc mật khẩu không đúng."
   permission_denide: "Bạn không có quyền truy cập"
   date: "Số ngày: "
+  like_fail: "Bạn đã like review này"
   review_success: "Cảm Ơn Đã Đánh Giá"
-  review_fail: "Error"
+  review_fail: "Review phải nhiều hơn 10 chữ"
   no_data: "Not Found 404"
 
   time:
@@ -17,17 +18,13 @@ vi:
     review:
       post: "Đã đăng"
       ago: "trước"
+      unlike: "Unlike"
+      like: "Like"
 
   shared:
     search:
       title: "Trải nghiệm kì nghỉ tuyệt vời"
       title2: "Tìm tour giá tốt nhất"
-  ngay: "Số ngày: "
-  hottour: "Tour nổi bật"
-  xemthem: "Xem thêm"
-  vnd: " VND"
-  err_location: "Nhập Sai"
-  add_location_sucess: "Thành Công"
 
   ngay: "Số ngày: "
   hottour: "Tour nổi bật"

@@ -11,6 +11,17 @@
           <%= t(".ago")%></i></small>
         </h5>
         <p><%= r.content %></p>
+        <% if logged_in? %>
+          <% pre_like = current_user.likes.find { |like| like.review_id == r.id} %>
+          <% if pre_like %>
+            <%= button_to t(".unlike"), unlike_path(like_id: pre_like, tour_id: @tour_details.id), method: :delete,
+            class: "button button-like" %>
+          <% else %>
+            <%= button_to t(".like"), likes_path(review_id: r, tour_id: @tour_details.id), method: :post, class: "button button-like" %>
+          <% end %>
+        <% end %>
+        <p><%= r.likes.count %> <%= (r.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+        <%= hidden_field_tag :id, @tour_details.id %>
         <%= image_tag "#{r.picture}", class: "w-100" %>
         <% if current_user?(r.user) %>
           <%= link_to "delete", r, method: :delete,
