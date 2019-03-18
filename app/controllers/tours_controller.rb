@@ -3,6 +3,7 @@ class ToursController < ApplicationController
   before_action :current_user, only: :show
 
   def show
+    @quantity = Booking.new
     @review  = current_user.reviews.build if logged_in?
     @reviews = @tour_details.reviews.order_reviews
   end

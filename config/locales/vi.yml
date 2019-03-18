@@ -9,10 +9,30 @@ vi:
   review_success: "Cảm Ơn Đã Đánh Giá"
   review_fail: "Review phải nhiều hơn 10 chữ"
   no_data: "Not Found 404"
+  booking_fail: "Bạn đã nhập quá số lượng cho phép"
+  booking_success: "Quý khách đã đặt tour thành công. Chân thành cảm ơn!!!"
+  booking_fail1: "Bạn không thể đặt tour này"
+  fail: "Lỗi không xác định."
 
   time:
     formats:
       defaut: "%H:%M %d/%m/%Y"
+
+  bookings:
+    show:
+      time_start: "Ngày khởi hành: "
+      quantity: "Số người: "
+      price: "Giá tiền: "
+      booking_info: "Thông Tin Cá Nhân"
+      tour: "Thông Tin Tour"
+
+    booking:
+      name: "*Họ và tên:"
+      phone_number: "*Số điện thoại:"
+      address: "*Địa chỉ:"
+      quantity: "*Số lượng khách:"
+      note: "Ghi chú:"
+      note1: "*Quý khách vui lòng nhập đầy đủ thông tin."
 
   reviews:
     review:

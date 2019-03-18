@@ -1,24 +1,22 @@
 class LikesController < ApplicationController
   before_action :find_review, only: [:index, :create]
-  before_action :find_tour, only: [:index, :create, :destroy]
   before_action :current_user, only: [:show, :destroy]
   before_action :find_like, only: [:destroy]
+  before_action :load_tour, only: [:create, :destroy]
 
   def create
-    @like = current_user.likes.new
-    @review.tour_id = @tour.id
-    @like.review_id = @review.id
-
-    unless already_liked?
-      return redirect_to tour_path(@tour) if @like.save
+    if already_liked?
+      flash[:danger] = t "like_fail"
+    else
+      @like = current_user.likes.create(review_id: @review.id)
     end
-    flash[:danger] = t "like_fail"
-    redirect_to tour_path(@tour)
+    redirect_to @tour
   end
 
   def destroy
-    @unlike.destroy
-    redirect_to tour_path(@tour)
+    return redirect_to @tour if @unlike.destroy
+    flash[:danger] = t "fail"
+    redirect_to @tour
   end
 
   private
@@ -30,7 +28,7 @@ class LikesController < ApplicationController
     redirect_to root_path
   end
 
-  def find_tour
+  def load_tour
     @tour = Tour.find_by id: params[:tour_id]
     return if @tour
     flash[:danger] = t "no_data"

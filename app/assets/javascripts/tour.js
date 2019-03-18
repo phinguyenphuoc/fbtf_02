@@ -1,6 +1,6 @@
 function myFunction() {
-  var price = document.getElementById("price").innerHTML;
-  var x = document.getElementById("mySelect").value;
+  var price = <%= @tour_details.price %>;
+  var x = document.getElementById("booking_quantity").value;
   document.getElementById("price").innerHTML = x*price;
 }
   myFunction();

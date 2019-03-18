@@ -52,40 +52,50 @@
             <%= render "reviews/review_form" %>
           </div>
           <% end %>
-          <%= render "reviews/review" %>
-        </div>
-      </div>
-          <div class="col-md-4 order-sm-first order-first">
-            <% if logged_in? %>
-            <div class="container-book-tour sticky-top">
-              <h2 class="price-tour-detail" id="price">
-                <%= @tour_details.price%>
-              </h2>
-              <div class="form-group">
-                <label><%= t(".quantity") %>
-                  <%= (@tour_details.max_quantity - @tour_details.recent_quantity) %>
-                  <%= t(".slot") %>
-                </label>
-                <select class="form-control form-control-fix", id="mySelect", onclick="myFunction()">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-            </div>
-            <button class="btn btn-primary w-100">
-              <%= t(".cofirm") %>
-            </button>
+          <div class="scrollbar">
+            <%= render @reviews %>
           </div>
-          <% end %>
         </div>
       </div>
+      <div class="col-md-4 order-sm-first order-first">
+        <% if logged_in? %>
+          <div class="container-book-tour sticky-top">
+            <h3 class="price-tour-detail">
+              Giá tiền: <%= number_to_currency(@tour_details.price) %>
+            </h3>
+            <h3 class="price-tour-detail">
+              Tổng tiền:
+            </h3>
+            <h2 class="price-tour-detail" id="price">
+
+            </h2>
+            <div class="form-group">
+              <label><%= t(".quantity") %>
+                <%= (@tour_details.max_quantity - @tour_details.recent_quantity) %>
+                <%= t(".slot") %>
+              </label>
+              <div>
+                <%= form_tag booking_path do %>
+                  <%= label :quantity, "Quantity:" %>
+                  <%= number_field_tag :quantity, params[:quantity],
+                    class: "form-control", onclick: "myFunction()" %>
+                <% end %>
+              </div>
+              <br>
+              <%= link_to "xac nhan", booking_path(tour_id: @tour_details.id), class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
 
+<script>
+  function myFunction() {
+  var price = <%= @tour_details.price %>;
+  var x = document.getElementById("quantity").value;
+  document.getElementById("price").innerHTML = x*price;
+}
+  myFunction();
+</script>
