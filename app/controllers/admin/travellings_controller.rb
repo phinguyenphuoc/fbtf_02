@@ -17,6 +17,7 @@ class Admin::TravellingsController < Admin::AdminBaseController
       redirect_to admin_travellings_path
     else
       flash[:danger] = t "update_travelling_failed"
+      redirect_to request.referrer
     end
   end
 
@@ -26,7 +27,7 @@ class Admin::TravellingsController < Admin::AdminBaseController
     else
       flash[:danger] = t "del_travelling_failed"
     end
-    redirect_to admin_travellings_path
+    redirect_to request.referrer
   end
 
   def new
@@ -40,7 +41,8 @@ class Admin::TravellingsController < Admin::AdminBaseController
       flash[:success] = t "add_travelling_success"
       redirect_to admin_travellings_path
     else
-      render :new
+      flash[:danger] = t "add_travelling_failed"
+      redirect_to request.referrer
     end
   end
 

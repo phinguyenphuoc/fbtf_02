@@ -69,7 +69,7 @@ Travelling.create!(location_start_id: 2,
 
 
 # create tour
-20.times do |n|
+16.times do |n|
   price = Faker::Number.number(6)
   time_start = Faker::Time.between(DateTime.now + 2, DateTime.now + 7)
   time_end = Faker::Time.between(DateTime.now + 10, DateTime.now + 15)

@@ -17,10 +17,11 @@ class Admin::ToursController < Admin::AdminBaseController
   def create
     @tour = Tour.new tour_params
     if @tour.save
-      flash[:success] = t "add_tour_sucess"
+      flash[:success] = t "add_tour_success"
       redirect_to admin_tours_path
     else
-      render :new
+      flash[:danger] = t "add_tour_failed"
+      redirect_to request.referrer
     end
   end
 
@@ -36,6 +37,7 @@ class Admin::ToursController < Admin::AdminBaseController
       redirect_to admin_tours_path
     else
       flash[:danger] = t "update_tour_failed"
+      redirect_to request.referrer
     end
   end
 
@@ -45,7 +47,7 @@ class Admin::ToursController < Admin::AdminBaseController
     else
       flash[:danger] = t "update_tour_failed"
     end
-    redirect_to admin_tours_path
+    redirect_to request.referrer
   end
 
   private
