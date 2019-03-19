@@ -1,0 +1,33 @@
+<div class="container-tour">
+  <div class="container pb-4">
+    <div class="tour-hot-container">
+      <div class="title-tour-hot">
+        <h3><%= t(".new_tour") %></h3>
+      </div>
+      <%= link_to t(".view_all"), index_path, class: "float-right btn btn-link" %>
+    </div>
+    <div class="row">
+      <% @new_tours.each do |n| %>
+      <div class="col-md-4">
+        <%= link_to tour_path(n), class: "card text-left card-tour" do %>
+          <div class="card-img-tour">
+            <%= image_tag "#{n.avatar}", class: "w-100" %>
+            <div class="img-location">
+              <i class="material-icons">location_on</i>
+                <%= n.travelling.location_start.name %> -
+                <%= n.travelling.location_end.name %>
+            </div>
+          </div>
+          <div class="card-body card-body-tour">
+            <h5 class="card-title"><%= n.description %></h5>
+            <p class="card-text mb-1"><i class="fa fa-clock-o"></i>
+              <%= ((n.time_end).to_date - (n.time_start).to_date).to_i %> ngày
+            </p>
+            <p class="card-price-tour"><%= number_to_currency(n.price) %></p>
+          </div>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

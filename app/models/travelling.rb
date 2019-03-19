@@ -11,4 +11,7 @@ class Travelling < ApplicationRecord
     errors.add(:location_start_id, "start end must be difference") if
       location_start_id == location_end_id
   end
+
+  scope :group_travellings, ->{group(:location_end_id)}
+  scope :where_travellings, ->(id){where(location_end_id: id)}
 end

@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_070852) do
     t.integer "tour_id"
     t.text "content"
     t.integer "rating"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

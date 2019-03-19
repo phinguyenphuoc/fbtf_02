@@ -14,4 +14,6 @@ class Tour < ApplicationRecord
     return errors.add(:time_start, "must be before end time") if
       time_start > time_end
   end
+
+  scope :order_new_tours, ->{order(:created_at)}
 end
