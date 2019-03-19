@@ -8,7 +8,7 @@ class Admin::LocationsController < Admin::AdminBaseController
 
   def update
     if @location.update_attributes location_params
-      flash[:sucess] = t "update_location_sucess"
+      flash[:success] = t "update_location_success"
       redirect_to admin_locations_path
     else
       flash[:danger] = t "update_location_failed"
@@ -18,9 +18,9 @@ class Admin::LocationsController < Admin::AdminBaseController
 
   def destroy
     if @location.destroy
-      flash[:sucess] = t "del_location_sucess"
+      flash[:success] = t "del_location_success"
     else
-      flash[:del_location_failed] = t "update_location_failed"
+      flash[:danger] = t "del_location_failed"
     end
     redirect_to admin_locations_path
   end
@@ -28,7 +28,7 @@ class Admin::LocationsController < Admin::AdminBaseController
   def create
     @location = Location.new location_params
     if @location.save
-      flash[:sucess] = t "add_location_sucess"
+      flash[:success] = t "add_location_success"
     else
       flash[:danger] = t "err_location"
     end

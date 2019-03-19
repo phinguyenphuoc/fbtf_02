@@ -22,7 +22,23 @@ vi:
   xemthem: "Xem thêm"
   vnd: " VND"
   err_location: "Nhập Sai"
-  add_location_sucess: "Thành Công"
+  add_location_success: "Thành Công"
+
+  ngay: "Số ngày: "
+  hottour: "Tour nổi bật"
+  xemthem: "Xem thêm"
+  vnd: " VND"
+  err_location: "Nhập Sai"
+  add_location_success: "Thành Công"
+  update_location_success: "Thay đổi thành công"
+  update_location_failed: "Thay đổi không thành công"
+  del_location_success: "Xóa địa điểm thành công"
+  del_location_failed: "Xóa địa điểm thất bại"
+  update_travelling_success: "Thay đổi thành công"
+  update_travelling_failed: "Thay đổi không thành công"
+  del_travelling_success: "Xóa travel thành công"
+  del_travelling_failed: "Xóa travel thất bại"
+  add_travelling_success: "Thành Công"
 
   ngay: "Số ngày: "
   hottour: "Tour nổi bật"
@@ -128,6 +144,7 @@ vi:
         profile: "Thông tin"
         logout: "Đăng xuất"
         search: "Search for..."
+        travelling: "Travelling"
       sidebar:
         admin: "Admin"
         dashboard: "Dashboard"
@@ -137,18 +154,6 @@ vi:
         tour: "Tour"
         location: "Địa điểm"
       footer:
-        copyright: Copyright
-        website: Framgia website
-    locations:
-      form:
-        new: Add new location
-        submit: Submit
-      location:
-        edit: Edit
-        del: Delete
-      index:
-        id: ID
-        name: NAME
         copyright: "Copyright"
         website: "Framgia website"
     locations:
@@ -161,9 +166,26 @@ vi:
       index:
         id: "ID"
         name: "NAME"
+        copyright: "Copyright"
+        website: "Framgia website"
       edit:
         new: "Change Name"
         submit: "Update"
+    travellings:
+      index:
+        id : "Id"
+        start: "Start"
+        end: "End"
+        click: "Click here to create new travelling"
+      edit:
+        submit: "Submit"
+        start: "Start"
+        end: "End"
+      new:
+        submit: "Submit"
+      travelling:
+        edit: "Edit"
+        del: "Delete"
     static_pages:
       show:
         welcome: "Xin chào"

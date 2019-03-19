@@ -5,6 +5,8 @@ class Travelling < ApplicationRecord
   belongs_to :location_end, class_name: Location.name,
     foreign_key: :location_end_id
 
+  scope :ordered_by_created, ->{order created_at: :desc}
+
   # select_hot_tour
   scope :select_hot_tour, (lambda do
     select("travellings.id as id,tours.price as price,
