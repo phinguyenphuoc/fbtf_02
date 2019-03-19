@@ -1,7 +1,7 @@
 <tr>
   <td><%= tour.id %></td>
   <td><%= tour.category.name%></td>
-  <td><%= tour.price.round %> VND</td>
+  <td><%= number_to_currency(tour.price.round) %></td>
   <td>
     <%= tour.travelling.location_start.name%>
     -
@@ -14,15 +14,11 @@
   </td>
   <td><%= tour.max_quantity %></td>
   <td><%= tour.recent_quantity %></td>
+  <td><%= tour.average_rating %></td>
   <td>
-    <div class="progress">
-      <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
+    <%= link_to t(".edit"), edit_admin_tour_path(tour), class: "btn btn-warning" %>
   </td>
   <td>
-    <%= link_to t(".edit"), edit_admin_tour_path(tour) %>
-  </td>
-  <td>
-    <%= link_to t(".del"), admin_tour_path(tour), method: :delete %>
+    <%= link_to t(".del"), admin_tour_path(tour), method: :delete, class: "btn btn-danger" %>
   </td>
 </tr>

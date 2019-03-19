@@ -35,6 +35,11 @@
             <li>
               <%= link_to t(".logout"), logout_path, method: :delete %>
             </li>
+            <% if is_admin? %>
+              <li>
+                <%= link_to t(".admin"), admin_root_path %>
+              </li>
+            <% end %>
           </ul>
         </li>
       <% else %>

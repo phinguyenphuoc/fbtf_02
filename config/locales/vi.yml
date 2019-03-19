@@ -76,6 +76,9 @@ vi:
   update_tour_failed: "Thay đổi không thành công"
   del_tour_success: "Xóa tour thành công"
   del_tour_failed: "Xóa tour thất bại"
+  del_user_success: "Xóa user thành công"
+  del_user_failed: "Xóa user thất bại"
+  err_user: "Not found"
   #layouts
   layouts:
     header:
@@ -204,7 +207,7 @@ vi:
   admin:
     admin_base:
       header:
-        admin: "Admin"
+        home: "Home"
         profile: "Thông tin"
         logout: "Đăng xuất"
         search: "Search for..."
@@ -217,6 +220,7 @@ vi:
         user: "Người dùng"
         tour: "Tour"
         location: "Địa điểm"
+        booking: "Booking"
       footer:
         copyright: "Copyright"
         website: "Framgia website"
@@ -265,6 +269,28 @@ vi:
         submit: "Submit"
       edit:
         submit: "Submit"
+        category: "Category"
+        domestic: "Domestic"
+        foreign: "Foreign"
+        travelling: "Travelling"
+        price: "Price"
+        time_start: "Time start"
+        time_end: "Time end"
+        max_quantity: "Max quantity"
+    bookings:
+      booking:
+        refuse: Refuse
+        approve: Approve
+      index:
+        note: "Note"
+    users:
+      user:
+        del: Delete
+        detail: Detail
+      index:
+        id: Id
+        email: Email
+        phonenumber: Phonenumber
     static_pages:
       show:
         welcome: "Xin chào"

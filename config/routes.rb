@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     resources :locations
     resources :travellings
     resources :tours
+    resources :bookings, only: %i(update index)
+    resources :user, only: %i(index destroy show)
   end
   resources :users
   resources :travellings
