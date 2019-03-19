@@ -13,7 +13,12 @@ sessions:
   remember_me: "1"
 
 static_pages:
-  hottour: 6
+  new_tours: 6
 
 tours:
   per_page: 10
+
+review:
+  length_review: 10
+  picture_size: "than 5MB"
+  picture: 5

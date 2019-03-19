@@ -5,15 +5,39 @@ User.create!(name: "Tran Le Thanh Dat",
              password: "123456",
              password_confirmation: "123456",
              role: 1)
-10.times do |n|
-  email = Faker::Internet.email
+
+20.times do |n|
+  name = Faker::Name.name
+  email = "tranlethanhdat#{n+1}@gmail.com"
   phonenumber = Faker::Number.number(10)
-  User.create!(name: "Dat Tran Le Thanh",
+  User.create!(name: name,
                email: email,
                phonenumber: phonenumber,
                password: "123456",
                password_confirmation: "123456")
 end
+
+# create review
+20.times do |n|
+  content = Faker::Lorem.sentence(20)
+  Review.create!(tour_id: 1,
+                 user_id: n+1,
+                 content: content)
+end
+20.times do |n|
+  content = Faker::Lorem.sentence(20)
+  Review.create!(tour_id: 2,
+                 user_id: n+1,
+                 content: content)
+end
+
+20.times do |n|
+  content = Faker::Lorem.sentence(20)
+  Review.create!(tour_id: 3,
+                 user_id: n+1,
+                 content: content)
+end
+
 # create category
 Category.create!(name: "domestic")
 Category.create!(name: "foreign")

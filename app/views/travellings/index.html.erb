@@ -1,0 +1,22 @@
+<% provide :title, t(".tours") %>
+<div>
+  <MiniSearch />
+  <div class="pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 order-md-first order-first">
+          <div class="card card-tour mb-4">
+            <div class="card-header title-search-tours">
+              <h5><%= t(".locations") %></h5>
+            </div>
+            <div class="list-group list-group-flush">
+              <%= render @travellings %>
+            </div>
+          </div>
+        </div>
+        <%= render "tours/tour" %>
+      </div>
+    </div>
+  </div>
+</div>
+
