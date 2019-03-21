@@ -22,3 +22,7 @@ review:
   length_review: 10
   picture_size: "than 5MB"
   picture: 5
+
+likes:
+  count_like: 1
+

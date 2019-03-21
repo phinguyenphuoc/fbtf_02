@@ -10,34 +10,30 @@ vi:
   review_delete_success: "Xóa review thành công"
   review_delete_fail: "Xóa review thất bại"
   no_data: "Not Found 404"
+  like_fail: "Bạn đã like review này"
+  fail: "Lỗi không xác định."
+  no_data: "Not Found 404"
 
   time:
     formats:
       defaut: "%H:%M %d/%m/%Y"
 
+    review_form:
+      format: "image/jpeg,image/gif,image/png"
+
   reviews:
     review:
       post: "Đã đăng"
       ago: "trước"
-
-    review_form:
-      format: "image/jpeg,image/gif,image/png"
+      unlike: "Unlike"
+      like: "Like"
+      likes: "Likes"
 
   shared:
     search:
       title: "Trải nghiệm kì nghỉ tuyệt vời"
       title2: "Tìm tour giá tốt nhất"
-  ngay: "Số ngày: "
-  hottour: "Tour nổi bật"
-  xemthem: "Xem thêm"
-  vnd: " VND"
-  err_location: "Nhập Sai"
-  add_location_success: "Thành Công"
 
-  ngay: "Số ngày: "
-  hottour: "Tour nổi bật"
-  xemthem: "Xem thêm"
-  vnd: " VND"
   err_location: "Nhập Sai"
   add_location_success: "Thành Công"
   update_location_success: "Thay đổi thành công"
@@ -49,17 +45,6 @@ vi:
   del_travelling_success: "Xóa travel thành công"
   del_travelling_failed: "Xóa travel thất bại"
   add_travelling_success: "Thành Công"
-
-  ngay: "Số ngày: "
-  hottour: "Tour nổi bật"
-  xemthem: "Xem thêm"
-  vnd: " VND"
-  err_location: "Nhập Sai"
-  add_location_sucess: "Thành Công"
-  update_location_sucess: "Thay đổi thành công"
-  update_location_failed: "Thay đổi không thành công"
-  del_location_sucess: "Xóa địa điểm thành công"
-  del_location_failed: "Xóa địa điểm thất bại"
 
   #layouts
   layouts:
@@ -104,6 +89,11 @@ vi:
       view_all: "Xem Tất Cả"
 
     new_tour:
+      location_name: "Địa điểm: "
+
+    new_tour:
+      new_tour: "Tour mới"
+      view_all: "Xem Tất Cả"
       location_name: "Địa điểm: "
 
   #users
