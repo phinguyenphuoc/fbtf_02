@@ -5,6 +5,9 @@ class Travelling < ApplicationRecord
   belongs_to :location_end, class_name: Location.name,
     foreign_key: :location_end_id
 
+  delegate :name, to: :location_start, prefix: :start
+  delegate :name, to: :location_end, prefix: :end
+
   scope :ordered_by_created, ->{order created_at: :desc}
 
   scope :group_travellings, ->{group :location_end_id}

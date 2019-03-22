@@ -1,7 +1,7 @@
 class Admin::TravellingsController < Admin::AdminBaseController
   before_action :check_permission
   before_action :load_travelling, only: %i(edit update destroy)
-  before_action :load_location, only: %i(edit new)
+  before_action :load_locations, only: %i(edit new)
 
   def index
     @travellings = Travelling.ordered_by_created.paginate page: params[:page],
@@ -51,7 +51,7 @@ class Admin::TravellingsController < Admin::AdminBaseController
     redirect_to admin_travellings_path
   end
 
-  def load_location
+  def load_locations
     @locations = Location.all.map{|e| [e.name, e.id]}
   end
 
