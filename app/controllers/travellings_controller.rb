@@ -7,5 +7,9 @@ class TravellingsController < ApplicationController
                   else
                     Travelling.all
                   end
+
+    @tours = Tour.search(@travelling.pluck(:id))
+                 .paginate(page: params[:page],
+                  per_page: Settings.tours.per_page)
   end
 end

@@ -4,8 +4,9 @@ class Admin::ToursController < Admin::AdminBaseController
   before_action :load_travellings, only: %i(new edit)
 
   def index
-    @tours = Tour.preload(:travelling).order_new_tours.paginate page: params[:page],
-       per_page: Settings.travelling_per_page
+    @tours = Tour.preload(:travelling)
+                 .order_new_tours.paginate page: params[:page],
+                   per_page: Settings.travelling_per_page
   end
 
   def new
