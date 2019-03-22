@@ -25,7 +25,7 @@
             <% @tours.flat_map do |t| %>
               <tr>
                 <td><%= t.id %></td>
-                <td><%= t.name%></td>
+                <td><%= t.name %></td>
                 <td><%= number_to_currency(t.price) %></td>
                 <td>
                   <%= t.travelling.start_name %>
@@ -33,7 +33,7 @@
                   <%= t.travelling.end_name %>
                 </td>
                 <td>
-                  <%= l t.time_start, format: :date%>
+                  <%= l t.time_start, format: :date %>
                   -
                   <%= l t.time_end, format: :date %>
                 </td>

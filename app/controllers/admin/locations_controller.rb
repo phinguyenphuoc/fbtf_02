@@ -2,8 +2,6 @@ class Admin::LocationsController < Admin::AdminBaseController
   before_action :check_permission
   before_action :load_location, except: %i(index create)
 
-  def show; end
-
   def edit; end
 
   def update
