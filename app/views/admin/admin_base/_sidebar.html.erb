@@ -33,7 +33,8 @@
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <%= link_to t(".user"), "#", class: "collapse-item" %>
+        <%= link_to t(".user"), admin_users_path, class: "collapse-item" %>
+        <%= link_to t(".booking"), admin_bookings_path, class: "collapse-item" %>
         <%= link_to t(".tour"), admin_tours_path, class: "collapse-item" %>
         <%= link_to t(".location"), admin_locations_path, class: "collapse-item" %>
         <%= link_to t(".travelling"), admin_travellings_path, class: "collapse-item" %>

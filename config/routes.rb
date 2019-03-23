@@ -12,10 +12,11 @@ Rails.application.routes.draw do
     root "static_pages#show"
     get "/locations", to: "locations#index"
     post "/locations", to: "locations#create"
-    resources :users, only: %i(index destroy)
+    resources :users, only: %i(index destroy show)
     resources :locations, except: :show
     resources :travellings, except: :show
     resources :tours, except: :show
+    resources :bookings, only: %i(index update)
   end
   resources :users
   resources :travellings

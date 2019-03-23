@@ -38,10 +38,12 @@ class Admin::ToursController < Admin::AdminBaseController
   def destroy
     if @tour.bookings.blank? == false
       flash[:danger] = t "update_tour_failed"
-      redirect_to admin_tours_path
+    elsif @tour.destroy
+      flash[:success] = t "update_tour_success"
     else
-      delete @tour
+      flash[:danger] = t "update_tour_failed"
     end
+    redirect_to admin_tours_path
   end
 
   private
@@ -62,14 +64,5 @@ class Admin::ToursController < Admin::AdminBaseController
     @travellings = Travelling.all.map do |e|
       ["#{e.start_name} - #{e.end_name}", e.id]
     end
-  end
-
-  def delete tour
-    if tour.destroy
-      flash[:success] = t "update_tour_success"
-    else
-      flash[:danger] = t "update_tour_failed"
-    end
-    redirect_to admin_tours_path
   end
 end
