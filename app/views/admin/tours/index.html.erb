@@ -41,10 +41,10 @@
                 <td><%= t.recent_quantity %></td>
                 <td></td>
                 <td>
-                  <%= link_to t(".edit"), edit_admin_tour_path(t) %>
+                  <%= link_to t(".edit"), edit_admin_tour_path(t), class: "btn btn-warning" %>
                 </td>
                 <td>
-                  <%= link_to t(".del"), admin_tour_path(t), method: :delete %>
+                  <%= link_to t(".del"), admin_tour_path(t), method: :delete, class: "btn btn-danger" %>
                 </td>
               </tr>
             <% end %>

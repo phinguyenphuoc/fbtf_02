@@ -218,6 +218,7 @@ vi:
         user: "Người dùng"
         tour: "Tour"
         location: "Địa điểm"
+        booking: "Booking"
       footer:
         copyright: "Copyright"
         website: "Framgia website"
@@ -265,10 +266,39 @@ vi:
         recent: "Recent"
         rating: "Rating"
         click: "Click here to create new tour"
+        edit: "Edit"
+        del: "Delete"
       new:
         submit: "Submit"
       edit:
         submit: "Submit"
+    users:
+      index:
+        id: "Id"
+        email: "Email"
+        phonenumber: "Phonenumber"
+      user:
+        edit: "Edit"
+        del: "Delete"
+      show:
+        tour_id: "Tour Id"
+        quantity: "Quantity"
+        status: "Status"
+        bill: "Bill"
+    bookings:
+      index:
+        user_id: "User Id"
+        tour_id: "Tour Id"
+        quantity: "Quantity"
+        status: "Status"
+        bill: "Bill"
+        name: "Name"
+        phone: "Phonenumber"
+        address: "Address"
+        note: "Note"
+      booking:
+        refuse: "Refuse"
+        approve: "Approve"
     static_pages:
       show:
         welcome: "Xin chào"

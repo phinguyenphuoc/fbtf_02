@@ -10,4 +10,6 @@ class Booking < ApplicationRecord
                      maximum: Settings.booking.max_phone}
   validates :address, presence: true
   validates :quantity, presence: true
+
+  scope :order_bookings, ->{order(created_at: :desc)}
 end
