@@ -31,7 +31,7 @@ vi:
       tour: "Thông Tin Tour"
       quantity: "Số lượng có thể đặt: "
 
-    booking:
+    booking_form:
       name: "*Họ và tên:"
       phone_number: "*Số điện thoại:"
       address: "*Địa chỉ:"
@@ -131,6 +131,7 @@ vi:
       tour_details: "Thông Tin Tour"
       price: "Giá tiền: "
       quantity: "Số chỗ còn lại: "
+      count: "%{count} đánh giá"
 
     tour_details:
       dates: "Ngày"

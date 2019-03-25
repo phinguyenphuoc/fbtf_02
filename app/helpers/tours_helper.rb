@@ -8,6 +8,6 @@ module ToursHelper
   end
 
   def check_booking_quantity max, recent
-    (max - recent) > 0
+    (max - recent).positive?
   end
 end

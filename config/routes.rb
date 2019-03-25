@@ -25,5 +25,8 @@ Rails.application.routes.draw do
 
   delete "/unlike", to: "likes#destroy"
   resources :likes
+
   resources :bookings, only: [:new, :create]
+  delete "/delete", to: "bookings#destroy"
+  resources :bookings
 end
