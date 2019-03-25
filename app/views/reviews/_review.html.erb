@@ -12,21 +12,17 @@
     <div class="review-rating" data-score=<%= review.rating %>></div>
     <br>
     <% if logged_in? %>
-      <% pre_like = pre_like(review.id) %>
-      <div id="follow_form">
-        <% if pre_like %>
-          <%= button_to t(".unlike"), unlike_path(like_id: pre_like),
-            method: :delete, class: "button button-like" %>
-        <% else %>
-          <%= button_to t(".like"), likes_path(review_id: review),
-            method: :post, class: "button button-like" %>
-        <% end %>
+      <div class="like_review_<%= review.id %>">
+        <%= render partial: "likes/like", locals: {review_id: review.id,
+          is_like: Like.find_by(user_id: current_user.id, review_id: review.id).present?} %>
       </div>
-    <% end %>
-    <p>
+    <%end %>
+    <span id ="count_like_<%= review.id %>" style="font-size: 14px">
       <%= review.likes.count %>
+    </span>
+    <span id ="setting_like_<%= review.id %>" style="font-size: 14px">
       <%= (review.likes.count) == Settings.likes.count_like ? t(".like") : t(".likes")%>
-    </p>
+    </span>
     <%= hidden_field_tag :id, @tour_details.id %>
     <%= image_tag "#{review.picture}", class: "w-100" %>
     <% if current_user?(review.user) %>

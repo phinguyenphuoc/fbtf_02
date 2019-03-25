@@ -1,0 +1,7 @@
+<% if is_like %>
+  <%= link_to t(".unlike"), unlike_path(review_id: review_id), class: "btn btn-secondary badge badge-pill",
+    id: "like", method: :delete, remote: true %>
+<% else %>
+  <%= link_to t(".like"), like_path(review_id: review_id), class: "btn btn-primary badge badge-pill",
+    id: "unlike", method: :post, remote: true %>
+<% end %>

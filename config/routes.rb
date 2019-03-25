@@ -23,10 +23,9 @@ Rails.application.routes.draw do
   resources :tours
   resources :reviews
 
+  post "/like", to: "likes#create"
   delete "/unlike", to: "likes#destroy"
-  resources :likes
 
   resources :bookings, only: [:new, :create]
   delete "/delete", to: "bookings#destroy"
-  resources :bookings
 end
