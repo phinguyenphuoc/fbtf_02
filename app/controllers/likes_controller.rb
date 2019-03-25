@@ -3,10 +3,10 @@ class LikesController < ApplicationController
   before_action :find_like, only: :destroy
 
   def create
-    if already_liked?
-      flash[:danger] = t "like_fail"
-    else
+    if !(already_liked?)
       @like = current_user.likes.create(review_id: @review.id)
+    else
+      flash[:danger] = t "like_fail"
     end
     redirect_to request.referrer
   end

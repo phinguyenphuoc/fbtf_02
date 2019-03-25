@@ -23,11 +23,15 @@
         <% if logged_in? %>
           <div class="container-book-tour sticky-top">
             <h3 class="price-tour-detail">
-              Giá tiền: <%= number_to_currency(@tour_details.price) %>
+              <%= t(".price")%><%= number_to_currency(@tour_details.price) %>
             </h3>
+            <h5 class="price-tour-detail">
+              <%= t(".quantity")%><%= @tour_details.max_quantity - @tour_details.recent_quantity %>
+            </h5>
+            <br>
             <div class="form-group">
-              <% if (@tour_details.max_quantity - @tour_details.recent_quantity) > 0 %>
-                <% if @tour_details.time_start.to_date >= Date.current %>
+              <% if check_booking_quantity @tour_details.max_quantity, @tour_details.recent_quantity %>
+                <% if check_time_start @tour_details.time_start.to_date %>
                   <%= link_to t(".cofirm"), new_booking_path(tour_id: @tour_details.id),
                     class: "btn btn-outline-light w-100" %>
                 <% end %>

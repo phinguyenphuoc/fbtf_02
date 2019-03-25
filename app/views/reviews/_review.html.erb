@@ -9,15 +9,19 @@
         <%= t(".ago")%></i></small>
     </h5>
     <p><%= review.content %></p>
+    <div class="review-rating" data-score=<%= review.rating %>></div>
+    <br>
     <% if logged_in? %>
       <% pre_like = pre_like(review.id) %>
-      <% if pre_like %>
-        <%= button_to t(".unlike"), unlike_path(like_id: pre_like),
-          method: :delete, class: "button button-like" %>
-      <% else %>
-        <%= button_to t(".like"), likes_path(review_id: review),
-          method: :post, class: "button button-like" %>
-      <% end %>
+      <div id="follow_form">
+        <% if pre_like %>
+          <%= button_to t(".unlike"), unlike_path(like_id: pre_like),
+            method: :delete, class: "button button-like" %>
+        <% else %>
+          <%= button_to t(".like"), likes_path(review_id: review),
+            method: :post, class: "button button-like" %>
+        <% end %>
+      </div>
     <% end %>
     <p>
       <%= review.likes.count %>

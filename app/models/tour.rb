@@ -4,6 +4,9 @@ class Tour < ApplicationRecord
   belongs_to :category
   belongs_to :travelling
   delegate :name, to: :category
+
+  delegate :location_start, to: :travelling
+  delegate :location_end, to: :travelling
   scope :order_new_tours, ->{order :created_at}
   scope :search, (lambda do |travelling_ids|
     where travelling_id: travelling_ids if travelling_ids

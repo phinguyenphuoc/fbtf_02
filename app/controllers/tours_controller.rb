@@ -2,6 +2,9 @@ class ToursController < ApplicationController
   before_action :load_tour_details, :current_user, only: :show
 
   def show
+    @reviews = @tour_details.reviews.to_a
+    @avg_rating = @reviews.blank? ? Settings.review.average_review : @tour_details.reviews.average(:rating)
+
     @review  = current_user.reviews.build if logged_in?
     @reviews = @tour_details.reviews.order_reviews
   end
