@@ -1,8 +1,8 @@
 class User < ApplicationRecord
+  CSV_ATTRIBUTES = %w(name email phonenumber).freeze
   has_many :bookings, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :reviews, dependent: :destroy
-
   attr_accessor :remember_token
   before_save :downcase_email
 
@@ -16,12 +16,12 @@ class User < ApplicationRecord
   validates :phonenumber, presence: true, numericality: true,
             length: {minimum: Settings.user.min_phone,
                      maximum: Settings.user.max_phone}
-
-  has_secure_password
   validates :password, presence: true,
   length: {minimum: Settings.user.min_pass}, allow_nil: true
+  has_secure_password
 
   scope :all_except, ->(user){where.not(id: user)}
+  scope :ordered_by_name, ->{order name: :desc}
 
   class << self
     def digest string

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :travellings, except: :show
     resources :tours, except: :show
     resources :bookings, only: %i(index update)
+    resources :export_users, only: :index
   end
   resources :users
   resources :travellings

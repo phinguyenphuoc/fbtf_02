@@ -33,5 +33,6 @@ booking:
   max_name: 50
   quantity_value: 1
   quantity_min: 1
+csv_users_file: "users.csv"
 
 

@@ -1,4 +1,10 @@
 vi:
+  header_csv:
+    name: "Name"
+    email: "Email"
+    phonenumber: "PhoneNumber"
+  imported: "Imported"
+  user: "User"
   base_title: "S Travel"
   errs: "Có %{errors_count}."
   msg_success: "Chúc mừng bạn đã đăng ký thành công."
@@ -288,6 +294,8 @@ vi:
         id: "Id"
         email: "Email"
         phonenumber: "Phonenumber"
+        link_export: "Export Users"
+        title: "Export CSV"
       user:
         edit: "Edit"
         del: "Delete"
