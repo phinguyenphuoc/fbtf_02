@@ -32,6 +32,7 @@ tmp/cache/bootsnap-compile-cache/*
 /tmp
 
 config/database.yml
+config/application.yml
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
