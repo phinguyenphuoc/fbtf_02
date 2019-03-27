@@ -1,0 +1,11 @@
+$('#list_review').append("<%= j render @review %>");
+$count = $('.total_review').text();
+$count = parseInt($count) + 1;
+$('.total_review').html($count + " đánh giá");
+$('.review-rating').raty({
+  readOnly: true,
+  path: '/assets/',
+  score: function(){
+    return $(this).attr('data-score');
+  },
+});

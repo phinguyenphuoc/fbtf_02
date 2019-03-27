@@ -14,9 +14,9 @@
             <%= render "reviews/review_form" %>
           </div>
           <% end %>
-          <div class="scrollbar">
-            <h2 style="text-align: center"><%= t(".count",count: @reviews.count) %></h2>
-            <%= render @reviews %>
+          <div class="scrollbar" id="list_review">
+            <h2 style="text-align: center" class="total_review"><%= t(".count",count: @reviews.count) %></h2>
+              <%= render @reviews %>
           </div>
           <%= will_paginate @reviews %>
         </div>
