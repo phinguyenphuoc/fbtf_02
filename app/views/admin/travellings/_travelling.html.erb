@@ -1,4 +1,4 @@
-<tr>
+<tr id="delete_travelling_<%= travelling.id %>">
   <td><%= travelling.id %></td>
   <td><%= travelling.start_name %></td>
   <td><%= travelling.end_name %></td>
@@ -6,6 +6,6 @@
     <%= link_to t(".edit"), edit_admin_travelling_path(travelling), class: "btn btn-warning"  %>
   </td>
   <td>
-    <%= link_to t(".del"), admin_travelling_path(travelling), method: :delete, class: "btn btn-danger" %>
+    <%= link_to t(".del"), admin_travelling_path(travelling), method: :delete, remote: true, class: "btn btn-danger" %>
   </td>
 </tr>

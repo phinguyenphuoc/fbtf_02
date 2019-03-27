@@ -197,6 +197,8 @@ vi:
   update_tour_failed: "Thay đổi không thành công"
   del_tour_success: "Xóa tour thành công"
   del_tour_failed: "Xóa tour thất bại"
+  del_user_success: "Xóa user thành công"
+  del_user_failed: "Xóa user thất bại"
 
   travellings:
     index:

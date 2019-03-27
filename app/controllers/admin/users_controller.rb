@@ -14,12 +14,14 @@ class Admin::UsersController < Admin::AdminBaseController
   end
 
   def destroy
-    if @user.destroy
-      flash[:success] = t "del_user_success"
-    else
-      flash[:danger] = t "del_user_failed"
+    respond_to do |format|
+      if @user.destroy
+        flash[:success] = t "del_user_success"
+      else
+        flash[:danger] = t "del_user_failed"
+      end
+      format.js
     end
-    redirect_to request.referrer
   end
 
   private

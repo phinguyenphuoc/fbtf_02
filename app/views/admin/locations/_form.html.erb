@@ -1,4 +1,4 @@
-<%= form_for [:admin, @location], html: {class: "form-inline"} do |f| %>
+<%= form_for [:admin, @location], remote: true, html: {class: "form-inline"} do |f| %>
   <div class="form-group mb-2">
     <%= f.label :name, t(".new"), class: "" %>
   </div>
