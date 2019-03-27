@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
       @booking.save!
       @tour.recent_quantity += @booking.quantity
       @tour.update_attributes!(recent_quantity: @tour.recent_quantity)
+      UserMailer.booking_confirm(current_user, @booking).deliver
       flash[:success] = t "booking_success"
     rescue ActiveRecord::RecordInvalid
       flash[:danger] = t "booking_fail1"

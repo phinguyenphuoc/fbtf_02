@@ -22,6 +22,7 @@ vi:
   booking_success: "Quý khách đã đặt tour thành công. Chân thành cảm ơn!!!"
   fail: "Lỗi không xác định."
   no_data: "Not Found 404"
+  confirm_booking: "Confirm booking"
 
   time:
     formats:
@@ -197,23 +198,6 @@ vi:
   del_tour_success: "Xóa tour thành công"
   del_tour_failed: "Xóa tour thất bại"
 
-  admins:
-    show:
-      admin: "Admin"
-      profile: "Thông tin"
-      logout: "Đăng xuất"
-      welcome: "Xin chào"
-    sidebar:
-      admin: "Admin"
-      dashboard: "Dashboard"
-      interface: "Interface"
-      manage: "Quản lí"
-      user: "Người dùng"
-      tour: "Tour"
-    footer:
-      copyright: Copyright
-      website: Framgia website
-
   travellings:
     index:
       tours: "Danh Sách Tour"
@@ -321,3 +305,18 @@ vi:
     static_pages:
       show:
         welcome: "Xin chào"
+  user_mailer:
+    booking_confirm:
+      tks: "Cảm ơn quý khách"
+      ordered: "đã đặt tour tại Framgia"
+      info: "Thông tin đơn hàng #"
+      info_pay: "Thông tin thanh toán"
+      address_pay: "Địa chỉ thanh toán"
+      more_info: "CHI TIẾT ĐƠN HÀNG"
+      tour: "Tour"
+      price: "Đơn giá"
+      quantity: "Số lượng"
+      discount: "Giảm giá"
+      total: "Tổng tạm"
+      total_bill: "Tổng giá trị đơn hàng"
+      link_booking: "Chi tiết đơn hàng tại Framgia"
