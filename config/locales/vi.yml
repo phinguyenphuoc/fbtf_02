@@ -59,20 +59,8 @@ vi:
       user: "User"
 
     footer:
-      about: "Về chúng tôi"
-      content: "Hệ thống đặt tour du lịch trực tuyến hàng đầu Việt Nam"
-      link: "Liên kết liên quan"
-      dk: "Điều kiện & Điều khoản"
-      qc: "Quy chế hoạt động"
-      question: "Câu hỏi thường gặp"
-      deal: "Tin khuyến mãi"
-      contact: "Liên hệ"
-      sp: "Tư vấn miễn phí (24/7):"
-      contact_phone1: "0123456789"
-      gopy: "Góp ý, phản ánh (8h00 - 22h00):"
-      contact_phone: "0987654321"
       vp: "Văn phòng"
-      vp1: "13F Keangnam Hanoi Landmark 72 Tower, Plot E6, Pham Hung Road, Nam Tu Liem Dist., Ha Noi"
+      vp1: "13F Keangnam Hanoi Landmark 72 Tower, Plot E6, Pham Hung Road, Ha Noi"
       vp2: "4F, FHome Building, 16 Ly Thuong Kiet Str., Hai Chau district, Da Nang"
       vp3: "8F Nice building, 467 Dien Bien Phu Str., Ward 25, Binh Thanh district, HCMC"
       another_link: "Liên kết khác"
@@ -148,7 +136,7 @@ vi:
       time_start: "Khởi Hành: "
       content: "Lịch Trình Tour"
       updating: "Đang cập nhật ..."
-      avg_rating: "Điểm đánh giá trung bình: "
+      avg_rating: "Average Rating "
 
     tour:
       tours: "Tours"

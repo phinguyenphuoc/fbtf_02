@@ -48,4 +48,8 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  def is_like? review_id
+    current_user.likes.user_review(review_id).exists?
+  end
 end
