@@ -1,0 +1,4 @@
+$('.locations').append("<%= j render @location %>")
+<% flash.each do |message_type, message| %>
+  $('#flash_messages').html("<div class='alert alert-<%= message_type %>'><%= message %>")
+<% end %>

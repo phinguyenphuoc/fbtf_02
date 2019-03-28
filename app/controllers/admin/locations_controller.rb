@@ -15,22 +15,26 @@ class Admin::LocationsController < Admin::AdminBaseController
   end
 
   def destroy
-    if @location.destroy
-      flash[:success] = t "del_location_success"
-    else
-      flash[:danger] = t "del_location_failed"
+    respond_to do |format|
+      if @location.destroy
+        flash[:success] = t "del_location_success"
+      else
+        flash[:danger] = t "del_location_failed"
+      end
+      format.js
     end
-    redirect_to admin_locations_path
   end
 
   def create
     @location = Location.new location_params
-    if @location.save
-      flash[:success] = t "add_location_success"
-    else
-      flash[:danger] = t "err_location"
+    respond_to do |format|
+      if @location.save
+        flash[:success] = t "add_location_success"
+      else
+        flash[:danger] = t "err_location"
+      end
+      format.js
     end
-    redirect_to admin_locations_path
   end
 
   def index

@@ -20,12 +20,14 @@ class Admin::TravellingsController < Admin::AdminBaseController
   end
 
   def destroy
-    if @travelling.destroy
-      flash[:success] = t "del_travelling_success"
-    else
-      flash[:danger] = t "del_travelling_failed"
+    respond_to do |format|
+      if @travelling.destroy
+        flash[:success] = t "del_travelling_success"
+      else
+        flash[:danger] = t "del_travelling_failed"
+      end
+      format.js
     end
-    redirect_to admin_travellings_path
   end
 
   def new

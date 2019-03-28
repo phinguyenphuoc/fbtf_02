@@ -22,32 +22,7 @@
             </tr>
           </thead>
           <tbody>
-            <% @tours.flat_map do |t| %>
-              <tr>
-                <td><%= t.id %></td>
-                <td><%= t.name %></td>
-                <td><%= number_to_currency(t.price) %></td>
-                <td>
-                  <%= t.travelling.start_name %>
-                  -
-                  <%= t.travelling.end_name %>
-                </td>
-                <td>
-                  <%= l t.time_start, format: :date %>
-                  -
-                  <%= l t.time_end, format: :date %>
-                </td>
-                <td><%= t.max_quantity %></td>
-                <td><%= t.recent_quantity %></td>
-                <td></td>
-                <td>
-                  <%= link_to t(".edit"), edit_admin_tour_path(t), class: "btn btn-warning" %>
-                </td>
-                <td>
-                  <%= link_to t(".del"), admin_tour_path(t), method: :delete, class: "btn btn-danger" %>
-                </td>
-              </tr>
-            <% end %>
+            <%= render @tours %>
           </tbody>
         </table>
         <%= will_paginate %>
