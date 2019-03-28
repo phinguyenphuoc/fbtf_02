@@ -8,10 +8,12 @@
   <td><%= booking.phonenumber %></td>
   <td><%= booking.address %></td>
   <td><%= booking.note %></td>
-  <td>
-    <%= link_to t(".refuse"), admin_booking_path(booking,status: "refuse"), method: :put, class: "btn btn-danger" %>
-  </td>
-  <td>
-    <%= link_to t(".approve"), admin_booking_path(booking,status: "approve"), method: :put, class: "btn btn-success" %>
-  </td>
+  <% if booking.waitting? %>
+    <td>
+      <%= link_to t(".refuse"), admin_booking_path(booking, status: "refuse"), method: :put, class: "btn btn-danger" %>
+    </td>
+    <td>
+      <%= link_to t(".approve"), admin_booking_path(booking, status: "approve"), method: :put, class: "btn btn-success" %>
+    </td>
+  <% end %>
 </tr>

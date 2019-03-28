@@ -16,9 +16,7 @@
       <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
           <%= render "header" %>
-          <% flash.each do |message_type, message| %>
-              <div class="alert alert-<%= message_type %>"><%= message %></div>
-          <% end %>
+          <%= render "flash" %>
           <div class="container-fluid">
             <%= yield %>
           </div>

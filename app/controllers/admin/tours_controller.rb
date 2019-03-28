@@ -4,9 +4,9 @@ class Admin::ToursController < Admin::AdminBaseController
   before_action :load_travellings, only: %i(new edit)
 
   def index
-    @tours = Tour.preload(:travelling)
-                 .order_new_tours.paginate page: params[:page],
-                   per_page: Settings.travelling_per_page
+    @tours =
+      Tour.preload(:travelling).order_new_tours.paginate page: params[:page],
+        per_page: Settings.travelling_per_page
   end
 
   def new
@@ -37,13 +37,17 @@ class Admin::ToursController < Admin::AdminBaseController
 
   def destroy
     if @tour.bookings.blank? == false
-      flash[:danger] = t "update_tour_failed"
+      flash[:danger] = t "del_tour_failed"
+      redirect_to request.referrer
     elsif @tour.destroy
-      flash[:success] = t "update_tour_success"
+      flash[:success] = t "del_tour_success"
+      respond_to do |format|
+        format.js
+      end
     else
-      flash[:danger] = t "update_tour_failed"
+      flash[:danger] = t "del_tour_failed"
+      redirect_to request.referrer
     end
-    redirect_to admin_tours_path
   end
 
   private

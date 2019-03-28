@@ -1,0 +1,5 @@
+$("#delete_travelling_<%= @travelling.id %>").remove();
+<% flash.each do |message_type, message| %>
+  $("#flash_messages").html("<div class='alert alert-<%= message_type %>'><%= message %>")
+<% end %>
+
