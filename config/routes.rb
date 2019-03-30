@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "static_pages#home"
 
+  get "/auth/:provider/callback", to: "sessions#create"
+  get "auth/failure", to: redirect("/")
   get "/index", to: "travellings#index"
   get "/show", to: "travellings#show"
   get "/signup", to: "users#new"

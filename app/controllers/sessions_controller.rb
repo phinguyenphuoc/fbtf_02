@@ -1,16 +1,16 @@
 class SessionsController < ApplicationController
-  before_action :load_user, only: :create
-
   def new
     return redirect_to root_path if logged_in?
   end
 
   def create
-    if @user&.authenticate params[:session][:password]
-      login @user
+    if request.env["omniauth.auth"]
+      @user = User.create_with_omniauth(request.env["omniauth.auth"])
+      log_in @user
+      redirect_to user_path(@user)
     else
-      flash.now[:danger] = t "err_login"
-      render :new
+      load_user
+      return login @user if @user&.authenticate params[:session][:password]
     end
   end
 
@@ -40,5 +40,7 @@ class SessionsController < ApplicationController
       log_in @user
       redirect_to root_path
     end
+    flash.now[:danger] = t "err_login"
+    render :new
   end
 end

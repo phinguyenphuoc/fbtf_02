@@ -13,9 +13,9 @@ class User < ApplicationRecord
   validates :email, presence: true, length: {maximum: Settings.user.max_email},
                     format: {with: VALID_EMAIL_REGEX},
                     uniqueness: {case_sensitive: false}
-  validates :phonenumber, presence: true, numericality: true,
-            length: {minimum: Settings.user.min_phone,
-                     maximum: Settings.user.max_phone}
+  # validates :phonenumber, presence: true, numericality: true,
+  #           length: {minimum: Settings.user.min_phone,
+  #                    maximum: Settings.user.max_phone}
   validates :password, presence: true,
   length: {minimum: Settings.user.min_pass}, allow_nil: true
   has_secure_password
@@ -37,6 +37,21 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
+  end
+
+  def self.create_with_omniauth auth
+    user = find_or_create_by(uid: auth["uid"], provider: auth["provider"])
+    user.email =
+      "#{auth['info']['name']}@#{auth['provider']}.com".downcase.gsub(/\s+/, "")
+    user.password = auth["uid"]
+    user.provider = auth["provider"]
+    user.name = auth["info"]["name"]
+    begin
+      user.save!
+    rescue Exception => e
+      puts "Error: #{e}"
+    end
+    user
   end
 
   # Remembers a user in the database for use in persistent sessions.
