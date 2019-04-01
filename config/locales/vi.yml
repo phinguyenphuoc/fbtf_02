@@ -102,6 +102,7 @@ vi:
   sessions:
     new:
       login: "Đăng nhập"
+      fb: "Login with Facebook"
 
     form:
       email: "Email:"
