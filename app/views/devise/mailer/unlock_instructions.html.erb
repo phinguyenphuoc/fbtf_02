@@ -1,0 +1,4 @@
+<p><%= @resource.email %>!</p>
+<p><%= t(".note1") %></p>
+<p><%= t(".note2") %></p>
+<p><%= link_to t(".unlock"), unlock_url(@resource, unlock_token: @token) %></p>

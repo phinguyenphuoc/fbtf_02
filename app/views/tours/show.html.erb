@@ -8,7 +8,7 @@
       <div class="col-md-8 order-md-first">
         <%= render "tour_details" %>
         <div class="border mt-4">
-          <% if logged_in? %>
+          <% if user_signed_in? %>
           <div class="container-comment border-bottom">
             <h4><%= t(".your_review") %></h4>
             <%= render "reviews/review_form" %>
@@ -18,11 +18,10 @@
             <h2 style="text-align: center" class="total_review"><%= t(".count",count: @reviews.count) %></h2>
               <%= render @reviews %>
           </div>
-          <%= will_paginate @reviews %>
         </div>
       </div>
       <div class="col-md-4 order-sm-first order-first">
-        <% if logged_in? %>
+        <% if user_signed_in? %>
           <div class="container-book-tour sticky-top">
             <h3 class="price-tour-detail">
               <%= t(".price")%><%= number_to_currency(@tour_details.price) %>

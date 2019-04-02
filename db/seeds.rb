@@ -1,9 +1,10 @@
 # fake user
-User.create!(name: "Tran Le Thanh Dat",
-             email: "tranlethanhdat@gmail.com",
+User.create!(name: "Phi Nguyen",
+             email: "phinguyen@gmail.com",
              phonenumber: 193456789,
-             password: "123456",
-             password_confirmation: "123456",
+             password: "123321",
+             password_confirmation: "123321",
+             confirmed_at: "2019-03-29 04:07:11.311314",
              role: 1)
 
 20.times do |n|
@@ -16,7 +17,6 @@ User.create!(name: "Tran Le Thanh Dat",
                password: "123456",
                password_confirmation: "123456")
 end
-
 # create review
 20.times do |n|
   content = Faker::Lorem.sentence(20)
