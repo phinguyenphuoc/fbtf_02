@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
   root "static_pages#home"
 
-  get "/auth/:provider/callback", to: "sessions#create"
-  get "auth/failure", to: redirect("/")
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   get "/index", to: "travellings#index"
   get "/show", to: "travellings#show"
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
-  get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy"
   namespace :admin do
     root "static_pages#show"
     get "/locations", to: "locations#index"
