@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  require "sidekiq/web"
+  mount Sidekiq::Web => "/sidekiq"
   root "static_pages#home"
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
@@ -19,6 +21,11 @@ Rails.application.routes.draw do
   end
   resources :users
   resources :travellings
+  # resources :travellings do
+  #   collection do
+  #     match 'search' => "travellings#search", :via => [:get, :post], :as => :search
+  #   end
+  # end
   resources :tours
   resources :reviews
 
