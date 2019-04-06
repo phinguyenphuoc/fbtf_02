@@ -5,8 +5,7 @@ class Admin::ToursController < Admin::AdminBaseController
 
   def index
     @tours =
-      Tour.preload(:travelling).order_new_tours.paginate page: params[:page],
-        per_page: Settings.travelling_per_page
+      Tour.preload(:travelling).order_new_tours.page(params[:page])
   end
 
   def new

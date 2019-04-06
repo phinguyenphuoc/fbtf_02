@@ -3,8 +3,7 @@ class Admin::BookingsController < Admin::AdminBaseController
   before_action :load_booking, only: :update
 
   def index
-    @bookings = Booking.order_bookings.paginate page: params[:page],
-      per_page: Settings.travelling_per_page
+    @bookings = Booking.order_bookings.page(params[:page])
     @salary = Booking.sum(:bill)
   end
 
