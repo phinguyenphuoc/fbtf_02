@@ -4,8 +4,7 @@ class Admin::TravellingsController < Admin::AdminBaseController
   before_action :load_locations, only: %i(edit new)
 
   def index
-    @travellings = Travelling.ordered_by_created.paginate page: params[:page],
-      per_page: Settings.travelling_per_page
+    @travellings = Travelling.ordered_by_created.page(params[:page])
   end
 
   def edit; end

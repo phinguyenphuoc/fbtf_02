@@ -1,4 +1,11 @@
 vi:
+  views:
+    pagination:
+      first: "« FIRST"
+      last: "LAST »"
+      previous: "‹ PREV"
+      next: "NEXT ›"
+      truncate: "…"
   header_csv:
     name: "Name"
     email: "Email"

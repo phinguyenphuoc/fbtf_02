@@ -4,9 +4,13 @@ class ToursController < ApplicationController
   def show
     @reviews = @tour_details.reviews.to_a
     @avg_rating = @reviews.blank? ? 0 : @tour_details.reviews.average(:rating)
-
     @review  = current_user.reviews.build if user_signed_in?
     @reviews = @tour_details.reviews.order_reviews
+    if request.xhr?
+      render json: {
+        addresses: @tour_details.travelling.location_end
+      }
+    end
   end
 
   private

@@ -39,8 +39,7 @@ class Admin::LocationsController < Admin::AdminBaseController
 
   def index
     @location = Location.new
-    @locations = Location.ordered_by_name.paginate page: params[:page],
-      per_page: Settings.location_per_page
+    @locations = Location.ordered_by_name.page(params[:page])
   end
 
   private

@@ -1,7 +1,44 @@
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzjvFAQYkrRuqhMbTdpsxwIdRPhFW3H7g"
+type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+    getLocation.initialize();
+  });
+
+  var getLocation = {
+    initialize: function() {
+      getLocation.fetch_data();
+    },
+
+    fetch_data: function() {
+      var url_path = window.location.pathname;
+      $.get(url_path, function(data) {
+        var addresses = data['addresses'];
+          console.log(addresses);
+          const latitude = addresses.latitude;
+          const longitude = addresses.longitude;
+          getLocation.draw_map(latitude, longitude);
+      }, 'json');
+    },
+
+    draw_map: function(lat, lng) {
+      var companyLatlng = new google.maps.LatLng(lat, lng);
+      var mapOptions = {
+      zoom: 15,
+      center: companyLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+      var marker = new google.maps.Marker({
+        position: companyLatlng,
+        map: map
+      });
+    }
+  }
+</script>
+
 <div class="border">
-  <div>
-    <%= image_tag "#{@tour_details.avatar}", class: "w-100" %>
-  </div>
+  <div id="map" class="map"></div>
   <div class="general-info">
     <div class="tour_info">
       <p class="general-info-item">
