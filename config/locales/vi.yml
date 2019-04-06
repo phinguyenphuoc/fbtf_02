@@ -85,6 +85,9 @@ vi:
     search:
       title: "Trải nghiệm kì nghỉ tuyệt vời"
       title2: "Tìm tour giá tốt nhất"
+      location_start: "Nơi xuất phát"
+      location_end: "Nơi đến"
+
 
   #sessions
   sessions:
