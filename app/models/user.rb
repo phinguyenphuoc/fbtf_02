@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
-    :validatable, :confirmable, :omniauthable, omniauth_providers: :facebook
+    :validatable, :confirmable, :omniauthable, omniauth_providers: %i[facebook]
   CSV_ATTRIBUTES = %w(name email phonenumber).freeze
   has_many :bookings, dependent: :destroy
   has_many :likes, dependent: :destroy
