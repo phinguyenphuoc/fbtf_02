@@ -2,7 +2,7 @@
   <div class="title-search-tours">
     <%= search_form_for @q, url: travellings_path do |f| %>
       <div class="form-group row">
-        <label for="inputPassword" class="col-sm-2 col-form-label" style="font-size: 20px;">Tour</label>
+        <label for="inputPassword" class="col-sm-2 col-form-label" id="label_tour"><%= t ".tours" %></label>
         <div class="col-sm-5">
           <div class="input-group">
             <%= f.search_field :travelling_location_start_name_or_travelling_location_end_name_cont, placeholder: "Location...", class: "form-control" %>
